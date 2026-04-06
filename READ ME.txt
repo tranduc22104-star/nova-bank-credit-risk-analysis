@@ -1,0 +1,30 @@
+# 🏦 Phân tích Rủi ro Tín dụng & Tối ưu hóa Chính sách (Credit Risk Analysis) - Nova Bank
+
+
+# 📌 1. Bối cảnh & Vấn đề Kinh doanh (Business Problem)
+*Nova Bank* đang đối mặt với tỷ lệ nợ xấu (Default Rate) lên tới **21.4%**, vượt mức an toàn của ngành (~15%). Ngân hàng cần thấu hiểu nguyên nhân gốc rễ dẫn đến việc vỡ nợ của khách hàng và xây dựng các chính sách phê duyệt mới để giảm nợ xấu mà không làm mất đi các khách hàng tốt (đánh đổi doanh thu).
+
+## 🎯 2. Mục tiêu Dự án (Objectives)
+* Phân tích (Descriptive): Hồ sơ hóa các nhóm khách hàng có rủi ro cao từ 32,581 bản ghi dữ liệu lịch sử.
+* Chẩn đoán (Diagnostic): Xác định các biến số chính (như Lịch sử nợ xấu, DTI, LTI) dự báo khả năng vỡ nợ.
+* Đề xuất (Prescriptive): Xây dựng công cụ Giả lập Chính sách (What-if Simulator) để tính toán tác động tài chính khi thắt chặt tiêu chí cho vay.
+
+# 💡 3. Các Phát hiện Quan trọng (Key Data Insights)
+Dựa trên phân tích bằng Power BI, tôi đã xác định được 4 điểm mấu chốt:
+* 🚨 Lịch sử trễ hạn là "Lá cờ đỏ" lớn nhất: Khách hàng có từ 2 lần trễ hạn trở lên có xác suất vỡ nợ vọt lên **35-48%** (gấp 2.7 lần bình thường).
+* 🎯 Tổ hợp rủi ro cao nhất (The Toxic Combo): Sử dụng AI Decomposition Tree, tôi phát hiện nhóm *Thị trường Mỹ + Vay Y tế + Hạng tín dụng F + Làm Part-time* có tỷ lệ vỡ nợ lên đến **58%**.
+* 💳 Hành vi "Đốt" Tín dụng: Nhóm khách hàng sử dụng cạn kiệt >80% hạn mức thẻ tín dụng và vay với lãi suất >15% gần như chắc chắn rơi vào trạng thái nợ xấu.
+* ⚖️ Ngưỡng gãy (Breakpoint) DTI/LTI:** Khi tỷ lệ Nợ/Thu nhập (DTI) hoặc Khoản vay/Thu nhập (LTI) vượt ngưỡng 60%, rủi ro mất vốn tăng gấp đôi.
+
+# 🛠️ 5. Quy trình Kỹ thuật (Technical Workflow)
+* Công cụ: Microsoft Power BI Desktop.
+* Làm sạch dữ liệu (Power Query):** Xử lý các giá trị dị biệt (như thâm niên làm việc = 123 năm), định dạng lại kiểu dữ liệu cho 29 cột.
+* Mô hình hóa (Data Modeling & DAX):** Tạo bảng `_Measures` riêng biệt. Viết 15+ công thức DAX bao gồm tính toán KPI cơ bản, tính tỷ lệ động (`CALCULATE`, `FILTER`), và thiết lập What-if Parameters.
+
+## 📂 6. Cấu trúc Kho lưu trữ
+* Data: Chứa dataset gốc và Data Dictionary.
+* Dashboard: Chứa file Power BI và bản báo cáo PDF tĩnh 
+* Images: Ảnh chụp 4 trang phân tích chi tiết.
+
+---
+* Cảm ơn bạn đã xem dự án này. Nếu bạn quan tâm đến việc thảo luận về phân tích dữ liệu hoặc rủi ro tín dụng, hãy kết nối với tôi
