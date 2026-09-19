@@ -11,7 +11,6 @@ The final Power BI report brings these two perspectives together to support **cr
 
 > **Project Timeline:** 10/08/2026 – Present
 
-![Credit Risk Overview](image/overview)
 
 ## Project Overview
 
@@ -92,7 +91,6 @@ Default Rate = Number of Default Cases / Total Cases
 
 These metrics are used throughout the Power BI analysis and the modelling workflow.
 
----
 
 # Power BI Dashboard
 
@@ -101,6 +99,8 @@ The Power BI report is a major deliverable of the project rather than a visualiz
 The report contains **five main analytical pages**.
 
 ## 1. Overview — Credit Risk Management
+
+![Credit Risk Overview](image/overview.png)
 
 The overview page presents the business context and the end-to-end process from customer/loan data to credit decision support.
 
@@ -132,9 +132,9 @@ This page documents:
 
 This makes the dashboard easier to interpret before using its analytical results.
 
----
-
 ## 3. Credit Default Analysis
+
+![Credit Risk Management Overview](image/002_data_analytics.png)
 
 This is the main **Data Analytics** section of the dashboard.
 
@@ -175,6 +175,8 @@ These are descriptive findings from the dataset and should not be interpreted as
 # Machine Learning
 
 ## 4. Default Prediction Model
+
+![Model Evaluation and Risk Adjustment Layer](assets/pbi/03_model_evaluation.png)
 
 The ML component uses **Logistic Regression** to estimate the probability that a credit application belongs to the default class.
 
@@ -257,6 +259,8 @@ The project uses these outputs to connect the ML model back to the business anal
 
 # False Positive / False Negative Analysis
 
+![Risk Adjustment](image/risk_adjustment_tiers.png)
+
 A key part of the ML workflow is analyzing where the model makes mistakes.
 
 ```text
@@ -276,9 +280,14 @@ Final Risk Review Output
 
 ### False Positive (FP)
 
+![Risk Recovery Layer](assets/ml/risk_adjustment_recovery.png)
+
+
 A non-default case incorrectly receives a default warning.
 
 ### False Negative (FN)
+
+![Risk Review Layers](image/risk_adjustment_rescue.png)
 
 A default case is incorrectly classified as non-default.
 
@@ -301,7 +310,7 @@ Core Logistic Regression
           ↓
    FP / FN Analysis
           ↓
- Rule-Based Risk Adjustment
+ Risk Adjustment Layers
           ↓
  Final Evaluation Output
 ```
