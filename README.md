@@ -134,7 +134,7 @@ This makes the dashboard easier to interpret before using its analytical results
 
 ## 3. Credit Default Analysis
 
-![Credit Risk Management Overview](image/002_data_analytics.png)
+![Credit Risk Management Overview](image/02_data_analytics.png)
 
 This is the main **Data Analytics** section of the dashboard.
 
@@ -176,7 +176,7 @@ These are descriptive findings from the dataset and should not be interpreted as
 
 ## 4. Default Prediction Model
 
-![Model Evaluation and Risk Adjustment Layer](assets/pbi/03_model_evaluation.png)
+![Model Evaluation and Risk Adjustment Layer](image/03_model_evaluation.png)
 
 The ML component uses **Logistic Regression** to estimate the probability that a credit application belongs to the default class.
 
@@ -259,7 +259,7 @@ The project uses these outputs to connect the ML model back to the business anal
 
 # False Positive / False Negative Analysis
 
-![Risk Adjustment](image/risk_adjustment_tiers.png)
+![Risk Adjustment](image/step_5_4_hedging_tiers.png)
 
 A key part of the ML workflow is analyzing where the model makes mistakes.
 
@@ -280,14 +280,14 @@ Final Risk Review Output
 
 ### False Positive (FP)
 
-![Risk Recovery Layer](assets/ml/risk_adjustment_recovery.png)
+![Risk Recovery Layer](image/step_5_4_lop_go.png)
 
 
 A non-default case incorrectly receives a default warning.
 
 ### False Negative (FN)
 
-![Risk Review Layers](image/risk_adjustment_rescue.png)
+![Risk Review Layers](image/step_5_4_lop_vot.png)
 
 A default case is incorrectly classified as non-default.
 
@@ -325,6 +325,8 @@ This layer should be understood as **decision-support logic**, not as an automat
 ---
 
 # Risk Groups & Decision Support
+
+![Risk Groups and Decision Support](image/04_risk_insights.png)
 
 The Power BI report groups applications by estimated probability of default and maps the groups to different levels of review.
 
