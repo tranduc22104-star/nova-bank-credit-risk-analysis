@@ -1,52 +1,100 @@
-Credit Risk Analytics & Default Prediction
+<div align="center">
 
-An end-to-end **Data Analytics + Machine Learning** project for analyzing credit risk, identifying default patterns, building a default prediction model, and translating analytical and model outputs into risk-review insights.
+# Credit Risk Analytics & Default Prediction
 
-The project is intentionally built around two connected perspectives:
+### Data Analytics + Machine Learning | Power BI | Python | PostgreSQL
 
-- **Data Analytics** — understand where default risk is concentrated, which customer/loan segments show higher observed default rates, and what factors should be investigated.
-- **Machine Learning** — estimate default probability, evaluate model performance, analyze false positives/false negatives, and group applications by observed/modelled risk.
+<p>
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white">
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white">
+  <img src="https://img.shields.io/badge/Status-In%20Progress-7B61FF?style=for-the-badge">
+</p>
+
+<p>
+  <strong>10/08/2026 – Present</strong>
+</p>
+
+<p>
+  An end-to-end <strong>Data Analytics + Machine Learning</strong> project for
+  credit-risk analysis, default prediction, model evaluation, and risk-review support.
+</p>
+
+</div>
+
+---
+
+## Project at a Glance
+
+<table>
+<tr>
+<td align="center"><strong>32,566</strong><br><sub>Credit Applications</sub></td>
+<td align="center"><strong>7,107</strong><br><sub>Default Cases</sub></td>
+<td align="center"><strong>21.82%</strong><br><sub>Observed Default Rate</sub></td>
+<td align="center"><strong>0.859</strong><br><sub>ROC-AUC</sub></td>
+</tr>
+<tr>
+<td align="center"><strong>79.95%</strong><br><sub>Accuracy</sub></td>
+<td align="center"><strong>73.91%</strong><br><sub>Recall</sub></td>
+<td align="center"><strong>81.64%</strong><br><sub>Specificity</sub></td>
+<td align="center"><strong>23</strong><br><sub>Model Features</sub></td>
+</tr>
+</table>
+
+---
+
+## 🔎 Project Overview
+
+This project is intentionally built around two connected perspectives:
+
+| 📊 Data Analytics | 🤖 Machine Learning |
+|---|---|
+| Understand where default risk is concentrated | Estimate default probability |
+| Segment customers and loans by risk dimensions | Evaluate model performance |
+| Analyze LTI, DTI, interest rate, income and credit history | Investigate FP / FN cases |
+| Build Power BI dashboards and business findings | Group applications by observed/modelled risk |
 
 The final Power BI report brings these two perspectives together to support **credit-risk review and decision support**. It is not intended to replace a bank's formal credit policy or automatically approve/reject applications.
 
-> **Project Timeline:** 10/08/2026 – Present
+### Project Timeline
+**10/08/2026 – Present**
 
+---
 
-## Project Overview
-
-The project uses a credit-risk dataset containing **32,566 records and 29 columns**. The target variable is:
-
-```text
-Trạng thái trả nợ
-0 = không vỡ nợ
-1 = vỡ nợ
-```
-
-The analytical workflow covers:
+## 🧭 End-to-End Workflow
 
 ```text
 Raw Credit Data
-      ↓
+      │
+      ▼
 Data Preparation & EDA
-      ↓
+      │
+      ▼
 Derived Risk Metrics
-      ↓
+      │
+      ▼
 Power BI Business Analysis
-      ↓
+      │
+      ▼
 Logistic Regression
-      ↓
+      │
+      ▼
 Model Evaluation
-      ↓
+      │
+      ▼
 False Positive / False Negative Analysis
-      ↓
+      │
+      ▼
 Rule-Based Risk Adjustment
-      ↓
+      │
+      ▼
 Risk Review & Decision Support
 ```
 
 ---
 
-# Data Analytics
+# 📊 Data Analytics
 
 ## 1. Data Understanding
 
@@ -67,21 +115,21 @@ The Power BI report includes a dedicated **Data Dictionary** page explaining the
 
 Several metrics are derived to make the credit analysis more interpretable.
 
-### Debt-to-Income Ratio (DTI)
+### DTI — Debt-to-Income Ratio
 
 ```text
 DTI = (Loan Amount + Other Debt) / Annual Income
 ```
 
-DTI represents the overall debt burden relative to annual income.
+Represents the overall debt burden relative to annual income.
 
-### Loan-to-Income Ratio (LTI)
+### LTI — Loan-to-Income Ratio
 
 ```text
 LTI = Loan Amount / Annual Income
 ```
 
-LTI measures the size of the requested loan relative to annual income.
+Measures the size of the requested loan relative to annual income.
 
 ### Default Rate
 
@@ -91,25 +139,23 @@ Default Rate = Number of Default Cases / Total Cases
 
 These metrics are used throughout the Power BI analysis and the modelling workflow.
 
+---
 
-# Power BI Dashboard
+# 📈 Power BI Dashboard
 
-The Power BI report is a major deliverable of the project rather than a visualization layer added after the ML model.
+Power BI is a **major deliverable** of the project rather than a visualization layer added after the ML model.
 
 The report contains **five main analytical pages**.
 
 ## 1. Overview — Credit Risk Management
 
-![Credit Risk Overview](image/overview.png)
+<div align="center">
 
-The overview page presents the business context and the end-to-end process from customer/loan data to credit decision support.
+<img src="image/overview.png" alt="Credit Risk Overview" width="950">
 
-It explains:
+</div>
 
-- The business problem
-- Four major data groups
-- The analytics and modelling workflow
-- How analytical findings are translated into risk-review actions
+The overview presents the business context and the end-to-end process from customer/loan data to credit decision support.
 
 ```text
 Data → Analysis → Risk Factors → Model → Risk Review → Decision Support
@@ -119,7 +165,7 @@ Data → Analysis → Risk Factors → Model → Risk Review → Decision Suppor
 
 ## 2. Data Dictionary
 
-This page documents:
+The Data Dictionary documents:
 
 - Important dataset columns
 - Derived metrics such as DTI and LTI
@@ -130,57 +176,57 @@ This page documents:
 - Classification threshold
 - Model coefficients
 
-This makes the dashboard easier to interpret before using its analytical results.
+---
 
 ## 3. Credit Default Analysis
 
-![Credit Risk Management Overview](image/02_data_analytics.png)
+<div align="center">
+
+<img src="image/02_data_analytics.png" alt="Credit Default Analysis" width="950">
+
+</div>
 
 This is the main **Data Analytics** section of the dashboard.
 
-The analysis compares portfolio size, default volume, default rate and default-loan value across different segments.
-
 ### Main dimensions analyzed
 
-- LTI groups
-- DTI groups
-- Interest-rate groups
-- Income groups
-- Housing status
-- Previous default history
-- Loan purpose
+`LTI` · `DTI` · `Interest Rate` · `Income` · `Housing Status` · `Previous Default History` · `Loan Purpose`
 
-### Portfolio-level figures shown in the report
+### Portfolio Snapshot
 
-- **32,566** total applications
-- **7,107** default cases
-- **21.82%** observed default rate
-- Approximately **2,010 billion VND** in default-loan value
+| KPI | Result |
+|---|---:|
+| Total applications | **32,566** |
+| Default cases | **7,107** |
+| Observed default rate | **21.82%** |
+| Default-loan value | **~2,010 billion VND** |
 
 > These figures describe the dataset used in the Power BI report. A high observed rate within a segment should be interpreted together with its sample size and portfolio context.
 
-### Key observed patterns
-
-The dashboard highlights several patterns in the current dataset:
+### Key Observed Patterns
 
 1. **Higher LTI is associated with higher observed default rates.**
 2. **Higher DTI is associated with higher observed default rates.**
 3. **Higher interest-rate groups show higher observed default rates.**
 4. **Lower-income groups show higher observed default rates.**
 
-These are descriptive findings from the dataset and should not be interpreted as causal effects by themselves.
+> These are descriptive findings from the dataset and should not be interpreted as causal effects by themselves.
 
 ---
 
-# Machine Learning
+# 🤖 Machine Learning
 
 ## 4. Default Prediction Model
 
-![Model Evaluation and Risk Adjustment Layer](image/03_model_evaluation.png)
+<div align="center">
+
+<img src="image/03_model_evaluation.png" alt="Model Evaluation and Risk Analysis" width="950">
+
+</div>
 
 The ML component uses **Logistic Regression** to estimate the probability that a credit application belongs to the default class.
 
-The modelling workflow progresses from a baseline model to a feature-engineered model.
+### Modelling Workflow
 
 ```text
 Cleaned Data
@@ -200,9 +246,9 @@ Default Probability
 Risk Group / Classification
 ```
 
-### Model features
+### Model Features
 
-The Power BI report documents the main variables used by the model, including:
+The current core model uses **23 features**, including:
 
 - Loan interest rate
 - LTI
@@ -213,37 +259,37 @@ The Power BI report documents the main variables used by the model, including:
 - Requested loan amount
 - Financial and interaction features
 
-The current core model uses **23 features**: original variables, derived financial variables and interaction features.
-
 ---
 
 ## 5. Model Evaluation
 
-The Power BI report presents the following model results for the evaluated test set:
+<div align="center">
 
-| Metric | Reported Result |
-|---|---:|
-| ROC-AUC | **0.859** |
-| Recall | **73.91%** |
-| Accuracy | **79.95%** |
-| Specificity | **81.64%** |
+<table>
+<tr>
+<td align="center"><strong>ROC-AUC</strong><br><big>0.859</big></td>
+<td align="center"><strong>Recall</strong><br><big>73.91%</big></td>
+<td align="center"><strong>Accuracy</strong><br><big>79.95%</big></td>
+<td align="center"><strong>Specificity</strong><br><big>81.64%</big></td>
+</tr>
+</table>
 
-At the classification threshold shown in the report, the confusion matrix is:
+</div>
 
-| | Predicted Default | Predicted Non-default |
+### Confusion Matrix
+
+|  | Predicted Default | Predicted Non-default |
 |---|---:|---:|
-| **Actual Default** | 1,051 TP | 371 FN |
-| **Actual Non-default** | 935 FP | 4,157 TN |
+| **Actual Default** | **1,051 TP** | **371 FN** |
+| **Actual Non-default** | **935 FP** | **4,157 TN** |
 
-These metrics are used to evaluate both the model's discrimination ability and the practical trade-off between missed defaults and false alarms.
+These metrics evaluate both the model's discrimination ability and the practical trade-off between missed defaults and false alarms.
 
 ---
 
-# Model Interpretation
+# 🧠 Model Interpretation
 
-The Power BI report also presents the relative contribution of the leading model variables.
-
-The five leading variables shown are:
+The Power BI report presents the relative contribution of the leading model variables:
 
 | Variable | Reported contribution |
 |---|---:|
@@ -257,9 +303,13 @@ The project uses these outputs to connect the ML model back to the business anal
 
 ---
 
-# False Positive / False Negative Analysis
+# ⚠️ False Positive / False Negative Analysis
 
-![Risk Adjustment](image/step_5_4_hedging_tiers.png)
+<div align="center">
+
+<img src="image/step_5_4_hedging_tiers.png" alt="Risk Adjustment Tiers" width="950">
+
+</div>
 
 A key part of the ML workflow is analyzing where the model makes mistakes.
 
@@ -268,10 +318,10 @@ Model Prediction
       ↓
 Confusion Matrix
       ↓
- ┌───────────────┬───────────────┐
- │ False Positive │ False Negative│
- │   FP review    │   FN review   │
- └───────────────┴───────────────┘
+┌─────────────────────┐
+│ False Positive (FP) │
+│ False Negative (FN) │
+└─────────────────────┘
       ↓
 Rule-Based Risk Adjustment
       ↓
@@ -280,129 +330,108 @@ Final Risk Review Output
 
 ### False Positive (FP)
 
-![Risk Recovery Layer](image/step_5_4_lop_go.png)
-
-
 A non-default case incorrectly receives a default warning.
+
+<div align="center">
+
+<img src="image/step_5_4_lop_go.png" alt="Risk Adjustment - FP Review" width="950">
+
+</div>
 
 ### False Negative (FN)
 
-![Risk Review Layers](image/step_5_4_lop_vot.png)
-
 A default case is incorrectly classified as non-default.
+
+<div align="center">
+
+<img src="image/step_5_4_lop_vot.png" alt="Risk Adjustment - FN Review" width="950">
+
+</div>
 
 The project compares the characteristics of FP cases with TN cases and FN cases with TP cases to design additional review rules.
 
-This is documented in the pipeline as a **Risk Adjustment** layer rather than treating it as a separate ML model.
-
 ---
 
-# Risk Adjustment Layer
+# 🛠️ Risk Adjustment Layer
 
 The final processing stage applies rule-based review logic on top of the core Logistic Regression model.
-
-The purpose is to examine selected FP/FN cases and evaluate whether additional characteristics suggest that a case deserves a different review treatment.
 
 ```text
 Core Logistic Regression
           ↓
-   Default Prediction
+    Default Prediction
           ↓
-   FP / FN Analysis
+      FP / FN Analysis
           ↓
- Risk Adjustment Layers
+  Risk Adjustment Layers
           ↓
- Final Evaluation Output
+   Final Evaluation Output
 ```
 
-The project documentation records two complementary review processes:
+Two complementary review processes are used:
 
 - **FP review** — examine cases flagged as risky that may resemble correctly classified non-default cases.
 - **FN review** — examine missed default cases and identify characteristics that may justify additional review.
 
-This layer should be understood as **decision-support logic**, not as an automatic credit approval/rejection policy.
+> This layer should be understood as **decision-support logic**, not as an automatic credit approval/rejection policy.
 
 ---
 
-# Risk Groups & Decision Support
+# 🎯 Risk Groups & Decision Support
 
-![Risk Groups and Decision Support](image/04_risk_insights.png)
+<div align="center">
+
+<img src="image/04_risk_insights.png" alt="Risk Groups and Decision Support" width="950">
+
+</div>
 
 The Power BI report groups applications by estimated probability of default and maps the groups to different levels of review.
 
-The dashboard explicitly states that these groups are **review guidance rather than automatic approval/rejection rules**.
-
 ### Review Level 1
-
 Lower estimated risk and a complete, consistent application.
 
-Typical checks include:
-
-- KYC / identity information
-- Credit history
-- Income and existing debt
-- DTI and LTI
-- Loan amount and purpose
-- Basic data-quality checks
-
 ### Review Level 2
-
 Medium estimated risk or cases requiring additional clarification.
 
-Typical checks include:
-
-- More detailed repayment-capacity review
-- Income documentation
-- Bank statements or employment documents when appropriate
-- Cross-checking declared information with verification sources
-
 ### Review Level 3
-
 Higher estimated risk or cases with multiple risk signals or significant inconsistencies.
 
-Typical checks include:
-
-- Detailed income and debt verification
-- High DTI / LTI review
-- Large loan relative to income
-- High interest-rate exposure
-- Previous default history
-- Additional verification where appropriate
+> These groups are **review guidance rather than automatic approval/rejection rules**.
 
 ---
 
-# Data Analytics + Machine Learning Integration
+# 🔗 Data Analytics + Machine Learning Integration
 
 The main strength of this project is the connection between descriptive analytics and predictive modelling.
 
 ```text
-                         CREDIT RISK DATA
-                                │
-                ┌───────────────┴───────────────┐
-                │                               │
-                ▼                               ▼
-         DATA ANALYTICS                    MACHINE LEARNING
-                │                               │
-        ┌───────┴───────┐               ┌───────┴───────┐
-        │               │               │               │
-       EDA          Power BI         Feature Eng.    Logistic Reg.
-        │               │               │               │
-        ▼               ▼               ▼               ▼
-   Risk Patterns   Business       Default Risk     Probability
-   LTI / DTI       Findings        Prediction       Prediction
-        │               │               │               │
-        └───────────────┴───────┬───────┴───────────────┘
-                                ▼
-                      FP / FN Error Analysis
-                                │
-                                ▼
-                     Rule-Based Risk Adjustment
-                                │
-                                ▼
-                         Decision Support
+                       CREDIT RISK DATA
+                              │
+              ┌───────────────┴───────────────┐
+              │                               │
+              ▼                               ▼
+       DATA ANALYTICS                   MACHINE LEARNING
+              │                               │
+        ┌─────┴─────┐                   ┌─────┴─────┐
+        │           │                   │           │
+       EDA      Power BI          Feature Eng.  Logistic Reg.
+        │           │                   │           │
+        ▼           ▼                   ▼           ▼
+   Risk Patterns  Business        Default Risk  Probability
+   LTI / DTI      Findings         Prediction    Prediction
+              │                               │
+              └───────────────┬───────────────┘
+                              ▼
+                     FP / FN Analysis
+                              │
+                              ▼
+                  Rule-Based Risk Adjustment
+                              │
+                              ▼
+                       Decision Support
 ```
 
-This allows the project to answer two different but connected questions:
+This allows the project to answer two connected questions:
 
 > **Data Analytics:** Where is credit risk concentrated and what patterns can be observed in the portfolio?
 
@@ -410,64 +439,12 @@ This allows the project to answer two different but connected questions:
 
 ---
 
-# End-to-End Workflow
-
-```text
-01  Raw Credit Dataset
-          ↓
-02  Data Cleaning & Train/Test Split
-          ↓
-03  Baseline Logistic Regression
-          ↓
-04  Feature Engineering & Core Model
-          ↓
-05  Model Evaluation
-          ↓
-06  Power BI Risk Analysis
-          ↓
-07  FP / FN Error Analysis
-          ↓
-08  Rule-Based Risk Adjustment
-          ↓
-09  Risk Groups & Review Guidance
-```
-
-The official project pipeline is documented in [`docs/PIPELINE.md`](docs/PIPELINE.md).
-
----
-
-# PostgreSQL Integration
-
-The project also includes PostgreSQL integration for storing intermediate and model-related outputs.
-
-The documented database schema is:
-
-```text
-credit_model
-```
-
-The project includes scripts for importing pipeline outputs and saving model information.
-
-Relevant scripts include:
-
-```text
-repo_source/db_import.py
-repo_source/db_save_model.py
-```
-
-The Power BI semantic model is connected to outputs from the pipeline through the project's synchronization workflow.
-
-> The repository documentation notes that the database and Power BI semantic model may require a fresh synchronization after pipeline-version changes. The README therefore treats the Power BI report as the documented analytical output rather than claiming that every stored database table is currently synchronized with the latest pipeline version.
-
----
-
-# Project Structure
+# 🗂️ End-to-End Project Structure
 
 ```text
 159/
 │
 ├── README.md
-│
 ├── Phân tích nợ xấu.pdf
 │
 ├── docs/
@@ -487,44 +464,39 @@ The Power BI semantic model is connected to outputs from the pipeline through th
     └── step_5/
 ```
 
-The repository also contains the project's Python environment and generated pipeline artifacts. These are implementation details and are not required to understand the analytical workflow.
+---
+
+# 🗄️ PostgreSQL Integration
+
+The project includes PostgreSQL integration for storing intermediate and model-related outputs.
+
+```text
+Database Schema
+└── credit_model
+```
+
+Relevant scripts:
+
+```text
+repo_source/db_import.py
+repo_source/db_save_model.py
+```
+
+The Power BI semantic model is connected to outputs from the pipeline through the project's synchronization workflow.
 
 ---
 
-# Tools & Technologies
+# 🧰 Tools & Technologies
 
-**Data Analytics**
-
-- Power BI
-- Excel
-- DAX
-- Exploratory Data Analysis
-- Data Cleaning
-- Data Visualization
-
-**Machine Learning**
-
-- Python
-- pandas
-- scikit-learn
-- Logistic Regression
-- Feature Engineering
-- StandardScaler
-- Log Transformation
-- Model Evaluation
-
-**Data / Engineering**
-
-- PostgreSQL
-- CSV / Excel data processing
-- Model serialization
-- Git / GitHub
+| Area | Tools |
+|---|---|
+| **Data Analytics** | Power BI · DAX · Excel · EDA · Data Cleaning · Data Visualization |
+| **Machine Learning** | Python · pandas · scikit-learn · Logistic Regression · Feature Engineering · StandardScaler · Log Transformation |
+| **Data / Engineering** | PostgreSQL · CSV / Excel Processing · Model Serialization · Git / GitHub |
 
 ---
 
-# What I Learned
-
-This project helped me practice the complete path from raw credit data to analytical and predictive outputs.
+# 📚 What I Learned
 
 ### Data Analytics
 
@@ -548,28 +520,24 @@ This project helped me practice the complete path from raw credit data to analyt
 - Connecting descriptive patterns with model outputs
 - Interpreting model features in a business context
 - Using error analysis to design additional review rules
-- Communicating model results as decision-support information rather than treating predictions as automatic decisions
+- Communicating model results as decision-support information
 
 ---
 
-# Limitations & Responsible Use
+# ⚠️ Limitations & Responsible Use
 
 This project is a portfolio/analytical implementation and should not be treated as a production credit-decision system.
-
-Important limitations include:
 
 - Observed relationships in the dataset do not by themselves establish causality.
 - Risk-group thresholds are review guidance, not automatic approval/rejection rules.
 - Model performance depends on the dataset and evaluation setup.
 - The current Logistic Regression model may not capture nonlinear relationships as well as more advanced models.
 - The Power BI report is intended to support human review rather than replace credit policy, compliance requirements or professional judgement.
-- The repository documentation notes that the Power BI semantic model and database may require synchronization after pipeline changes.
-
-The dashboard itself explicitly states that its outputs **do not replace formal credit policy or the credit-approval process**.
+- The Power BI semantic model and database may require synchronization after pipeline changes.
 
 ---
 
-# Documentation
+# 📖 Documentation
 
 - [`PIPELINE.md`](docs/PIPELINE.md) — end-to-end processing pipeline and model workflow
 - [`HIEN_TRANG_HE_THONG.md`](docs/HIEN_TRANG_HE_THONG.md) — current system/database state
@@ -578,16 +546,26 @@ The dashboard itself explicitly states that its outputs **do not replace formal 
 
 ---
 
-## Skills Demonstrated
+## 💼 Skills Demonstrated
 
-**Data Analysis • Exploratory Data Analysis • Power BI • DAX • Excel • Data Visualization • Business Intelligence • Python • pandas • scikit-learn • Logistic Regression • Feature Engineering • Model Evaluation • PostgreSQL • Risk Analytics • Decision Support**
+<div align="center">
+
+`Data Analysis` · `EDA` · `Power BI` · `DAX` · `Excel` · `Business Intelligence` ·  
+`Python` · `pandas` · `scikit-learn` · `Logistic Regression` · `Feature Engineering` ·  
+`Model Evaluation` · `PostgreSQL` · `Risk Analytics` · `Decision Support`
+
+</div>
 
 ---
 
-## Author
+<div align="center">
+
+### Author
 
 **Đức**
 
-Data Analyst / Data Science Portfolio
+_Data Analyst / Data Science Portfolio_
 
 **Project Timeline:** 10/08/2026 – Present
+
+</div>
