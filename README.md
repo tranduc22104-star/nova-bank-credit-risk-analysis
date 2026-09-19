@@ -11,7 +11,7 @@ The final Power BI report brings these two perspectives together to support **cr
 
 > **Project Timeline:** 10/08/2026 – Present
 
-![Credit Risk Overview](image/step_5_4_lop_go.png)
+![Credit Risk Overview](image/overview)
 
 ## Project Overview
 
