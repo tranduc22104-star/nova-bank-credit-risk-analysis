@@ -25,25 +25,6 @@
 
 ---
 
-## Project at a Glance
-
-<table>
-<tr>
-<td align="center"><strong>32,566</strong><br><sub>Credit Applications</sub></td>
-<td align="center"><strong>7,107</strong><br><sub>Default Cases</sub></td>
-<td align="center"><strong>21.82%</strong><br><sub>Observed Default Rate</sub></td>
-<td align="center"><strong>0.859</strong><br><sub>ROC-AUC</sub></td>
-</tr>
-<tr>
-<td align="center"><strong>79.95%</strong><br><sub>Accuracy</sub></td>
-<td align="center"><strong>73.91%</strong><br><sub>Recall</sub></td>
-<td align="center"><strong>81.64%</strong><br><sub>Specificity</sub></td>
-<td align="center"><strong>23</strong><br><sub>Model Features</sub></td>
-</tr>
-</table>
-
----
-
 ## 🔎 Project Overview
 
 This project is intentionally built around two connected perspectives:
