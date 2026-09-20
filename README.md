@@ -58,7 +58,7 @@ This project is intentionally built around two connected perspectives:
 The final Power BI report brings these two perspectives together to support **credit-risk review and decision support**. It is not intended to replace a bank's formal credit policy or automatically approve/reject applications.
 
 ### Project Timeline
-**10/08/2026 – Present**
+**02/04/2026 – 3/09/2026**
 
 ---
 
