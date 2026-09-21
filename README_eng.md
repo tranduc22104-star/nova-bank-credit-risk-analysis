@@ -227,14 +227,14 @@ The model is evaluated on an **unseen Test Set of 6,514 applications** after int
 | Metric | Result | Interpretation |
 | :--- | :---: | :--- |
 | **Accuracy** | **94.80%** | Overall proportion of correctly classified good and defaulted loans. |
-| **ROC-AUC** | **0.8593** | Ability to discriminate between defaulting and non-defaulting customers. |
+| **ROC-AUC** | **0.7264** | Ability to discriminate between defaulting and non-defaulting customers. |
 | **Recall (Sensitivity)** | **92.41%** | Correctly identifies **92.41%** of actual default cases in the portfolio. |
 | **Precision** | **85.05%** | When the model flags a default risk, it is correct **85.05%** of the time. |
 | **Specificity** | **95.46%** | Correctly identifies **95.46%** of non-defaulting customers. |
 | **F1-Score** | **88.57%** | Balances default detection and prediction precision. |
-| **K-S Statistic** | **0.5850** | Indicates strong separation between risk groups. |
-| **PR-AUC** | **0.7450** | Measures precision-recall performance under class imbalance (~21.8% defaults). |
-| **Brier Score / Log Loss** | **0.101 / 0.335** | Measures the quality and reliability of predicted probabilities. |
+| **K-S Statistic** | **0.3542** | Indicates strong separation between risk groups. |
+| **PR-AUC** | **0.4492** | Measures precision-recall performance under class imbalance (~21.8% defaults). |
+| **Brier Score / Log Loss** | **0.2004/ 0.5871** | Measures the quality and reliability of predicted probabilities. |
 
 </div>
 
