@@ -319,7 +319,7 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 
 ---
 
-## 9. Cấu Trúc Repository
+## 9. Cấu Trúc Dự Án
 
 ```text
 ├── docs/
