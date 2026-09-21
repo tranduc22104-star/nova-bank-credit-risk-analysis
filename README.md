@@ -224,9 +224,9 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 
 | Chỉ số | Kết quả | Tiêu chuẩn ngành & Diễn giải |
 | :--- | :---: | :--- |
-| **Độ chính xác (Độ chính xác)** | **94.80%** | Tỷ lệ phân loại chính xác tổng thể giữa khoản vay tốt và khoản vay xấu. |
+| **Độ chính xác** | **94.80%** | Tỷ lệ phân loại chính xác tổng thể giữa khoản vay tốt và khoản vay xấu. |
 | **ROC-AUC** | **0.7264** | Khả năng phân biệt giữa khách hàng vỡ nợ và không vỡ nợ. |
-| **Độ bao phủ (Độ nhạy)** | **92.41%** | Phát hiện chính xác **92.41%** tổng số trường hợp vỡ nợ thực tế trong danh mục. |
+| **Độ nhạy** | **92.41%** | Phát hiện chính xác **92.41%** tổng số trường hợp vỡ nợ thực tế trong danh mục. |
 | **Độ chính xác dự báo** | **85.05%** | Khi mô hình cảnh báo rủi ro vỡ nợ, kết quả chính xác **85.05%** số lần. |
 | **Độ đặc hiệu** | **95.46%** | Bảo vệ **95.46%** khách hàng có khả năng trả nợ khỏi việc bị từ chối nhầm. |
 | **Điểm F1** | **88.57%** | Cân bằng giữa khả năng phát hiện rủi ro và duy trì khách hàng tốt. |
