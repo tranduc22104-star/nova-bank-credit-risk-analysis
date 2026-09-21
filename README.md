@@ -1,7 +1,7 @@
 <div align="center">
 
 # Phân Tích Rủi Ro Tín Dụng & Dự Đoán Nợ Xấu
-
+[🇬🇧 English](README_eng.md) | 🇻🇳 Tiếng Việt
 ### Phân tích dữ liệu + Học máy | Power BI | Python | PostgreSQL
 
 <p>
