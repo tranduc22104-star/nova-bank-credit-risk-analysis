@@ -455,6 +455,4 @@ Dự án này là một triển khai phục vụ **danh mục/phân tích** và 
 
 _Phân tích dữ liệu / Khoa Học Dữ Liệu Portfolio_
 
-**Thời gian thực hiện dự án:** 10/08/2026 – Hiện tại
-
 </div>
