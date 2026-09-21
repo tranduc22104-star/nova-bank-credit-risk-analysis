@@ -20,46 +20,15 @@
 
 </div>
 
+
 ## 🔎 Project Overview
 
-A credit management and decision-support platform designed to provide executive leadership with a centralized view of the entire customer loan portfolio and application pipeline. By integrating in-depth evaluations of credit histories, borrower profiles, and advanced risk metrics, the system serves as a reliable foundation for informed and timely credit underwriting and approval decisions.
-### ✨ Key Objectives & Capabilities
-- **Comprehensive Portfolio Oversight:** Real-time visibility into loan application pipelines, active facilities, and overall portfolio health.
-- **Credit & Risk Intelligence:** Deep-dive analysis of credit histories, financial profiles, and automated risk scoring indicators.
-- **Smart Decision Support:** Actionable insights and analytics to empower leadership in making secure, efficient, and data-driven decisions on new credit originations.
+
+The final Power BI report brings these two perspectives together to support **credit-risk review and decision support**. It is not intended to replace a bank's formal credit policy or automatically approve/reject applications.
 
 
 ## 🧭 End-to-End Workflow
 
-```text
-Raw Credit Data
-      │
-      ▼
-Data Preparation & EDA
-      │
-      ▼
-Derived Risk Metrics
-      │
-      ▼
-Power BI Business Analysis
-      │
-      ▼
-Logistic Regression
-      │
-      ▼
-Model Evaluation
-      │
-      ▼
-False Positive / False Negative Analysis
-      │
-      ▼
-Rule-Based Risk Adjustment
-      │
-      ▼
-Risk Review & Decision Support
-```
-
----
 
 # 📊 Data Analytics
 
