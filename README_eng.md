@@ -457,6 +457,5 @@ This project is a **portfolio/analytics implementation** and should not be consi
 
 _Data Analysis / Data Science Portfolio_
 
-**Project Duration:** 10/08/2026 – Present
 
 </div>
