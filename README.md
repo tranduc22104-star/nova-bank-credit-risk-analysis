@@ -127,30 +127,41 @@ These metrics are used throughout the Power BI analysis and the modelling workfl
 
 ## 3. Exploratory Data Analytics (EDA) & Data Insights
 
-The analytical phase investigates risk concentration across 32,566 loan records to identify descriptive patterns before model building.
+The portfolio analytics phase addresses the core business question: **"Where is Credit Default Risk Concentrated?"** (*Nợ xấu đang tập trung ở đâu?*), analyzing borrower segments and loan structures across all **32,566 applications**.
 
-### 📌 Portfolio Snapshot
+<div align="center">
+  <img src="images/02_data_analytics.png" alt="Credit Default Analysis Dashboard" width="100%" />
+</div>
+
+### 📌 Portfolio High-Level KPIs
 
 <div align="center">
 
-| Total Applications | Default Cases | Overall Default Rate | Total Non-Performing Loan Value |
+| Total Applications (Số hồ sơ) | Default Cases (Hồ sơ nợ xấu) | Overall Default Rate (Tỷ lệ nợ xấu) | Total Bad Debt (Tổng tiền vay nợ xấu) |
 | :---: | :---: | :---: | :---: |
-| **32,566** | **7,107** | **21.82%** | **~2,010 Billion VND** |
+| **32,566** | **7,107** | **21.82%** | **2,010 Billion VND** |
 
 </div>
 
-### 🔍 Key Observed Risk Patterns
+### 💡 Core Strategic Insights (*Nhận xét chính từ phân tích danh mục*)
 
-1. **Loan-to-Income (LTI) as the Dominant Burden Factor:**
-   * Applications with **LTI > 0.35** exhibit an exponential surge in default probability (>45%).
-   * Borrowers requesting more than one-third of their annual income struggle significantly with debt serviceability.
-2. **Interest Rate Risk Cascading:**
-   * Higher-risk borrower segments are typically priced at higher interest rates (>14.5%), which paradoxically compounds debt-service pressure and drives elevated observed defaults.
-3. **Income and Housing Stability:**
-   * **Renters** show an observed default rate nearly **1.8× higher** than home owners.
-   * Lower-income brackets account for over 40% of all default instances in the observed portfolio.
-4. **Loan Purpose Variation:**
-   * Loans for *Debt Consolidation* and *Medical Emergencies* demonstrate significantly higher default rates compared to *Education* or *Home Improvement*.
+> [!IMPORTANT]
+> **01. GÁNH NẶNG NỢ (DEBT BURDEN):**
+> * **Tỷ lệ nợ xấu leo thang phi mã theo đòn bẩy tài chính:** Cả hai chỉ số LTI và DTI đều cho thấy mối quan hệ đồng biến cực mạnh với rủi ro vỡ nợ.
+> * Nhóm vay có **LTI ≥ 0.40** ghi nhận tỷ lệ nợ xấu **74.54%** (cao gấp **6.5 lần** so với nhóm an toàn < 0.10 ở mức 11.51%).
+> * Nhóm **DTI ≥ 0.70** có tỷ lệ nợ xấu chạm đỉnh **79.04%** (cao gấp **7.1 lần** nhóm < 0.20 ở mức 11.08%).
+> * *Quy mô rủi ro:* Phân khúc **LTI từ 0.30 – 0.40** gánh lượng nợ xấu lớn nhất toàn danh mục với **673.8 tỷ VND**, trong khi phân khúc **DTI từ 0.35 – 0.70** tập trung tới **1,477.2 tỷ VND** nợ xấu.
+
+> [!WARNING]
+> **02. CHI PHÍ VAY (BORROWING COSTS):**
+> * **Lãi suất cao tạo vòng xoáy mất khả năng thanh toán:** Lãi suất càng cao, nợ xấu càng nghiêm trọng. Nhóm khách hàng chịu lãi suất **≥ 16%** có tỷ lệ nợ xấu lên tới **63.23%**.
+> * Nhóm lãi suất cận cao **12 – 15.99%** nắm giữ khối lượng tiền vay nợ xấu lớn nhất danh mục (**799.3 tỷ VND**, chiếm ~40% tổng dư nợ xấu), cho thấy chi phí vốn nặng nề trực tiếp bóp nghẹt dòng tiền trả nợ hàng tháng.
+
+> [!TIP]
+> **03. NĂNG LỰC THU NHẬP (EARNING CAPACITY):**
+> * **Lớp đệm thu nhập bảo vệ danh mục an toàn:** Tỷ lệ nợ xấu nghịch biến rõ rệt với quy mô thu nhập của khách hàng.
+> * Nhóm thu nhập thấp nhất (**< 782 triệu VND**) có tỷ lệ vỡ nợ lên tới **47.08%**, nhưng tỷ lệ này giảm liên tục xuống chỉ còn **8.73%** ở nhóm có thu nhập cao (**≥ 3.91 tỷ VND**).
+> * Phân khúc khách hàng trung lưu (**782 triệu – 1.96 tỷ VND**) là nhóm tích tụ giá trị nợ xấu lớn nhất danh mục (**1,330.8 tỷ VND**), đòi hỏi quy trình thẩm định dòng tiền chặt chẽ hơn thay vì chỉ dựa vào quy mô thu nhập danh nghĩa.
 
 ---
 
@@ -169,16 +180,10 @@ Raw Dataset (32,566 rows)
 └─────────────────────────┴─────────────────────────┘
          │
          ▼
-Feature Preprocessing (Log Transform + StandardScaler + Balanced Weights)
-         │
-         ▼
-Logistic Regression Estimator
-         │
-         ▼
 Raw Probability Predictions (Test Set)
          │
          ▼
-Step 4: Risk Adjustment Layer (LTI Thresholds & Business Rules)
+Risk Adjustment Layer (LTI Thresholds & Business Rules)
          │
          ▼
 Final Validated Credit Risk Assessment
@@ -188,7 +193,7 @@ Final Validated Credit Risk Assessment
 
 ## 5. Feature Importance & Variable Contribution
 
-The relative contribution of each feature is quantified using standardized absolute coefficient values scaled by feature standard deviations ($|\beta_j \times \sigma_j|$), ensuring rigorous comparability across different numerical scales:
+The relative contribution of each feature is quantified using standardized absolute coefficient values scaled by feature standard deviations, ensuring rigorous comparability across different numerical scales:
 
 <div align="center">
 
@@ -247,73 +252,72 @@ The model was validated on the **unseen Test Set (6,514 applications)** after in
 
 ## 7. Error Audit & Cost-Sensitive Analysis (DBeaver / SQL)
 
-In commercial retail banking, classification errors carry asymmetric financial impacts:
 
-$$\text{Financial Loss}(\text{FN}) \gg \text{Opportunity Cost}(\text{FP})$$
+### 🟢 1. Rescue Layer: FP → TN (*Lớp Gỡ – Giải oan khách hàng tốt*)
 
-* **False Negatives (FN - 108 cases):** Insolvent borrowers classified as creditworthy. This directly causes **severe principal capital write-offs**.
-* **False Positives (FP - 231 cases):** Creditworthy customers mistakenly flagged as high-risk. This results in **lost interest revenue and customer friction**.
+* **Target Population:** `prediction_test_non_default.csv` (All **5,092 applications** that did **not** default in reality).
+* **Pre-Adjustment Baseline:**
+  * **TN (Correct Approvals):** **3,704 cases**
+  * **FP (False Alarms / Wrongly Rejected):** **1,388 cases**
+* **Adjustment Condition:**
+  $$\mathbf{0.1987 \le LTI \le 0.342}$$
+* **Cases Rescued (Lấy được):** **1,157 cases** successfully converted from **FP → TN** (eligible creditworthy borrowers unlocked for loan revenue).
+* **Cases Remaining (Còn lại ngoài dải):** **231 cases** remain as FP (conservative risk buffers retained).
+* **Post-Adjustment Result:**
+  * **TN increased:** $3,704 \rightarrow \mathbf{4,861 \text{ cases}}$
+  * **FP reduced:** $1,388 \rightarrow \mathbf{231 \text{ cases}}$ *(83.36% false alarms eliminated)*
 
-Using **DBeaver and advanced SQL queries**, individual error cohorts were audited against credit attributes to formulate business adjustment cut-offs.
 
-```text
-Model Probability Score
-           │
-           ▼
-┌──────────────────────────────────────────────────────────┐
-│                   DBeaver SQL Auditing                   │
-│   • Identify boundary cases (Prob: 0.40 - 0.60)          │
-│   • Investigate extreme LTI vs. Employment Stability     │
-└──────────────────────────────────────────────────────────┘
-           │
-           ▼
-┌──────────────────────────────────────────────────────────┐
-│         Step 4: Rule-Based Policy Adjustment Layers       │
-│                                                          │
-│  [Rescue Layer - FP → TN]                                │
-│  • Criteria: Low LTI (<0.20) + High Seniority (>5 yrs)   │
-│  • Impact: Rescues creditworthy loans for revenue        │
-│                                                          │
-│  [Catch Layer - FN → TP]                                 │
-│  • Criteria: LTI > 0.35 + Interest Rate > 15%            │
-│  • Impact: Overrides model to prevent capital loss       │
-└──────────────────────────────────────────────────────────┘
-           │
-           ▼
-Final Calibrated Risk Decision
-```
+### 🔴 2. Catch Layer: FN → TP (*Lớp Vớt – Bắt nợ xấu tiềm ẩn*)
+
+* **Target Population:** `prediction_test_has_default.csv` (All **1,422 applications** that actually defaulted).
+* **Pre-Adjustment Baseline:**
+  * **TP (Defaults Flagged):** **865 cases**
+  * **FN (Missed Defaults / Leakage):** **557 cases**
+* **Adjustment Condition:**
+  $$\mathbf{0.0653 \le LTI \le 0.1907}$$
+* **Cases Caught (Lấy được):** **449 cases** successfully converted from **FN → TP** (preventing severe capital write-offs).
+* **Cases Remaining (Còn lại ngoài dải):** **108 cases** remain as FN (monitored for manual credit committee review).
+* **Post-Adjustment Result:**
+  * **TP increased:** $865 \rightarrow \mathbf{1,314 \text{ cases}}$
+  * **FN reduced:** $557 \rightarrow \mathbf{108 \text{ cases}}$ *(80.61% missed defaults recovered)*
 
 ---
 
-# 📊 Power BI Dashboard & Decision Support System
+## 8. Decision Support System
 
-The Power BI solution translates complex statistical probabilities into an interactive decision-support interface for credit underwriters and risk committees.
+### Mức độ rà soát hồ sơ theo xác suất rủi ro
 
-## 8. Multi-Tier Review Framework
+| Mức | Xác suất | Quy trình rà soát |
+| :---: | :---: | :--- |
+| 🟢 **1** | < 20% | Rà soát tiêu chuẩn: xác minh KYC, kiểm tra thu nhập, DTI, LTI, mục đích vay, lịch sử vỡ nợ, trùng lặp hồ sơ. |
+| 🟡 **2** | 20–35% | Rà soát tăng cường (gồm toàn bộ Mức 1): phân tích chi tiết khả năng trả nợ, yêu cầu chứng từ bổ sung (sao kê, hợp đồng lao động), đối chiếu chéo thông tin, gọi xác minh khi cần. |
+| 🔴 **3** | ≥ 35% | Thẩm định chuyên sâu: xác minh nguồn thu nhập, kiểm tra DTI/LTI đặc biệt cao, đối chiếu Tờ khai ↔ Chứng từ ↔ Sao kê ↔ CIC. ⚠️ *Mức 3 không đồng nghĩa tự động từ chối.* |
 
-Rather than automating binary approvals, applications are mapped into **Three Actionable Review Tiers**:
+### Hồ sơ rủi ro cao cần kiểm tra gì?
 
-```text
-┌───────────────────────────────────────────────────────────────────────────┐
-│                      CREDIT UNDERWRITING TIERS                            │
-├─────────────────┬───────────────────┬─────────────────────────────────────┤
-│   Risk Tier     │  Estimated PD     │ Recommended Underwriting Action     │
-├─────────────────┼───────────────────┼─────────────────────────────────────┤
-│ 🟢 Tier 1 (Low) │    PD < 20%       │ Fast-track standard approval        │
-│ 🟡 Tier 2 (Mid) │ 20% ≤ PD ≤ 50%    │ Enhanced due diligence & collateral │
-│ 🔴 Tier 3 (High)│    PD > 50%       │ Policy override / Direct rejection  │
-└─────────────────┴───────────────────┴─────────────────────────────────────┘
-```
+| # | Khía cạnh | Chỉ số trọng yếu | Hướng dẫn |
+| :---: | :--- | :--- | :--- |
+| 01 | **Chất lượng dữ liệu** | Thiếu · Bất thường · Lỗi thời | Xác minh dữ liệu đầu vào trước khi dựa vào kết quả mô hình. |
+| 02 | **Năng lực trả nợ** | Thu nhập · DTI · LTI | Đánh giá gánh nặng tài chính; không kết luận từ một biến đơn lẻ. |
+| 03 | **Cấu trúc khoản vay** | Số tiền vay · Lãi suất · Kỳ hạn | Rà soát quy mô và chi phí khoản vay so với năng lực tài chính. |
+| 04 | **Lịch sử tín dụng** | Từng vỡ nợ · Thâm niên tín dụng | Đối chiếu hành vi tín dụng trước đây trước khi kết luận mức độ rủi ro. |
+| 05 | **Xác minh & Thẩm quyền** | Chứng từ · Xác minh bên thứ ba | Xác minh hồ sơ rủi ro cao hoặc thiếu dữ liệu; chuyển cấp xem xét khi cần, tuân thủ nghiêm bảo mật dữ liệu. |
 
-### 🖥️ Dashboard Analytical Views
-* **Executive Summary:** Portfolio KPIs, overall NPL volume, and portfolio default distribution.
-* **Portfolio Segmentation:** Interactive breakdowns by Loan Purpose, Term, Age Group, and Income Bracket.
-* **Risk Driver Matrix:** Real-time exploration of LTI vs. Interest Rate intersections.
-* **Model Diagnostic Page:** ROC Curve, confusion matrix toggles, and probability threshold simulators.
-* **Underwriter Decision Workbench:** Case-by-case lookup with customer risk scorecard profiling.
+### Phân khúc có tỷ lệ nợ xấu cao cần ưu tiên rà soát
 
+> *Dùng để định hướng rà soát chuyên sâu — không phải ngưỡng tự động từ chối.*
+
+| Phân khúc rủi ro | Tỷ lệ nợ xấu quan sát |
+| :--- | :---: |
+| Tỷ lệ tổng nợ / thu nhập (DTI) ≥ 0,70 | ≈ **79,0%** |
+| Tỷ lệ khoản vay / thu nhập (LTI) ≥ 0,40 | ≈ **74,5%** |
+| Lãi suất khoản vay ≥ 16% | ≈ **63,2%** |
+| Thu nhập < 782 triệu đồng/năm | ≈ **47,1%** |
+| Lịch sử từng vỡ nợ | ≈ **37,8%** *(vs. ~18,4% nhóm không vỡ nợ)* |
+
+> **Nguyên tắc chung:** Đánh giá đa chiều (năng lực tài chính + cấu trúc khoản vay + hành vi tín dụng + chất lượng hồ sơ); không dùng xác suất mô hình để tự động từ chối; tuân thủ pháp luật và bảo mật dữ liệu cá nhân trong mọi hoạt động xác minh.
 ---
-
 ## 9. Repository Structure
 
 ```text
