@@ -13,8 +13,8 @@
 </p>
 
 <p>
-  Một dự án <strong>Data Analytics + Machine Learning</strong> theo quy trình end-to-end,
-  tập trung vào phân tích rủi ro tín dụng, dự đoán nợ xấu, model evaluation và hỗ trợ rà soát rủi ro.
+  An <strong>Data Analytics + Machine Learning</strong> project following an end-to-end workflow,
+  focused on credit risk analysis, default prediction, model evaluation, and risk review support.
 </p>
 
 </div>
@@ -25,58 +25,58 @@
 
 ### 🏢 Business Context
 
-Lãnh đạo cần một góc nhìn toàn diện về **loan portfolio của khách hàng** để theo dõi hồ sơ vay, đánh giá credit characteristics và quản lý các rủi ro tín dụng tiềm ẩn.
+Management needs a comprehensive view of the **customer loan portfolio** to monitor loan applications, assess credit characteristics, and manage potential credit risks.
 
-Dự án tổng hợp các thông tin quan trọng bao gồm **customer characteristics, loan information, credit history, repayment behavior và risk indicators**, từ đó cung cấp góc nhìn data-driven về portfolio quality và hỗ trợ quá trình đánh giá hồ sơ tín dụng mới.
+The project consolidates key information including **customer characteristics, loan information, credit history, repayment behavior, and risk indicators**, providing a data-driven view of portfolio quality and supporting the assessment of new loan applications.
 
 ### 🎯 Project Objective
 
-Dự án kết hợp **Data Analysis và Data Science** nhằm:
+The project combines **Data Analysis and Data Science** to:
 
-- 📊 Theo dõi và phân tích tổng thể **loan portfolio**
-- 🔍 Phân tích **customer characteristics và tín dụng**
-- ⚠️ Xác định các yếu tố liên quan đến **rủi ro tín dụng**
-- 🤖 Xây dựng mô hình dự đoán **probability of credit default**
-- 📈 Phát triển bảng điều khiển tương tác nhằm hỗ trợ **portfolio monitoring và ra quyết định**
+- 📊 Monitor and analyze the overall **loan portfolio**
+- 🔍 Analyze **customer and credit characteristics**
+- ⚠️ Identify factors associated with **credit risk**
+- 🤖 Build a model to predict the **probability of credit default**
+- 📈 Develop an interactive dashboard to support **portfolio monitoring and decision-making**
 
 ### 💡 Project Outcome
 
-Giải pháp cuối cùng tích hợp **phân tích nghiệp vụ, visualization dữ liệu và Machine Learning** để cung cấp:
+The final solution integrates **business analysis, data visualization, and Machine Learning** to provide:
 
-- **Business Insights** — Hiểu customer characteristics, đặc điểm khoản vay và các mô hình rủi ro trong danh mục.
-- **Risk Analysis** — Xác định các yếu tố quan trọng liên quan đến rủi ro tín dụng và phân tích prediction results của mô hình.
-- **Prediction Evaluation** — Ước tính probability of credit default bằng mô hình Machine Learning.
-- **Hỗ trợ ra quyết định** — Cung cấp visualization tương tác và các phân tích data-driven để hỗ trợ đánh giá tín dụng và portfolio management.
+- **Business Insights** — Understand customer characteristics, loan characteristics, and risk patterns across the portfolio.
+- **Risk Analysis** — Identify key factors associated with credit risk and analyze model prediction results.
+- **Prediction Evaluation** — Estimate the probability of credit default using a Machine Learning model.
+- **Decision Support** — Provide interactive visualizations and data-driven analyses to support credit assessment and portfolio management.
 
-Báo cáo Power BI cuối cùng kết hợp hai góc nhìn này nhằm hỗ trợ **credit risk review và ra quyết định**. Báo cáo không nhằm thay thế chính sách tín dụng chính thức của ngân hàng hoặc tự động phê duyệt/từ chối hồ sơ.
+The final Power BI report combines these perspectives to support **credit risk review and decision-making**. It is not intended to replace the bank's official credit policy or automatically approve/reject loan applications.
 
 ---
 
 ## 🔄 Credit Risk Analysis Workflow: From Raw Data to Actionable Insights
 
-Dự án triển khai một **quy trình Phân tích Rủi ro Tín dụng end-to-end**, kết hợp **Data Analysis, Data Science, SQL và Trí tuệ kinh doanh (BI)** để chuyển đổi raw credit data thành các nhận xét có thể hành động nhằm hỗ trợ portfolio monitoring và credit decision-making.
+The project implements an **end-to-end Credit Risk Analysis workflow**, combining **Data Analysis, Data Science, SQL, and Business Intelligence (BI)** to transform raw credit data into actionable insights that support portfolio monitoring and credit decision-making.
 
 <div align="center">
-  <img src="images/credit_risk_workflow.png" alt="Workflow phân tích rủi ro tín dụng" width="100%" />
+  <img src="images/credit_risk_workflow.png" alt="Credit Risk Analysis Workflow" width="100%" />
 </div>
 
-* **Bước 1 - Raw Credit Data (Microsoft Excel):**
-  * Thu thập và quản lý dữ liệu thô bao gồm **hồ sơ vay, thông tin khách hàng, credit history, lịch sử khoản vay, dữ liệu giao dịch và dữ liệu tham chiếu**.
+* **Step 1 - Raw Credit Data (Microsoft Excel):**
+  * Collect and manage raw data including **loan applications, customer information, credit history, loan history, transaction data, and reference data**.
 
-* **Bước 2 - Chuẩn Bị Dữ Liệu & phân tích dữ liệu khám phá (Python & Pandas):**
-  * Thực hiện **data cleaning**, xử lý missing values, kiểm tra data quality, phân tích distributions và relationships between variables, đồng thời xác định các **mô hình và potential risk indicators** trước khi xây dựng mô hình.
+* **Step 2 - Data Preparation & EDA (Python & Pandas):**
+  * Perform **data cleaning**, handle missing values, check data quality, analyze distributions and relationships between variables, and identify **potential risk patterns and indicators** before model development.
 
-* **Bước 3 - Model Building & Evaluation (Scikit-learn):**
-  * Xây dựng mô hình phân loại **Logistic Regression** để dự đoán rủi ro tín dụng. Thực hiện train/test split, hyperparameter tuning và model evaluation bằng **Độ chính xác, Precision, Recall, F1-score, ROC-AUC và Confusion Matrix**.
+* **Step 3 - Model Building & Evaluation (Scikit-learn):**
+  * Build a **Logistic Regression** classification model to predict credit risk. Perform a train/test split, hyperparameter tuning, and model evaluation using **Accuracy, Precision, Recall, F1-Score, ROC-AUC, and Confusion Matrix**.
 
-* **Bước 4 - Phân Tích FP / FN (DBeaver - SQL):**
-  * Sử dụng **SQL** để so sánh prediction results với actual outcomes, xác định các trường hợp **Trường Hợp Âm Tính Giả (FN)** và **Trường Hợp Dương Tính Giả (FP)**, đồng thời phân tích customer characteristics và khoản vay liên quan đến model misclassifications.
+* **Step 4 - FP / FN Analysis (DBeaver - SQL):**
+  * Use **SQL** to compare predicted outcomes with actual outcomes, identify **False Negative (FN)** and **False Positive (FP)** cases, and analyze customer and loan characteristics associated with model misclassifications.
 
-* **Bước 5 - Risk Adjustment (Python Rules):**
-  * Áp dụng **các business rules** dựa trên kết quả phân tích FP/FN để điều chỉnh dự đoán của mô hình, tinh chỉnh risk classification và tạo ra **Điểm Rủi Ro / Phân Khúc Rủi Ro Cuối Cùng** phục vụ phân tích nghiệp vụ.
+* **Step 5 - Risk Adjustment (Python Rules):**
+  * Apply **business rules** based on FP/FN analysis to adjust model predictions, refine risk classification, and generate **Final Risk Scores / Risk Segments** for business analysis.
 
-* **Bước 6 - Decision Support (Power BI):**
-  * Xây dựng **biểu đồ bảng điều khiển Power BI tương tác** để visualization loan portfolio, risk segmentation, customer characteristics và key risk indicators, hỗ trợ **portfolio monitoring, đánh giá rủi ro và credit decision-making**.
+* **Step 6 - Decision Support (Power BI):**
+  * Build an **interactive Power BI dashboard** to visualize the loan portfolio, risk segments, customer characteristics, and key risk indicators, supporting **portfolio monitoring, risk assessment, and credit decision-making**.
 
 ---
 
@@ -84,90 +84,86 @@ Dự án triển khai một **quy trình Phân tích Rủi ro Tín dụng end-to
 
 ## 1. Data Understanding
 
-Dự án bắt đầu bằng việc tìm hiểu bốn nhóm thông tin chính được sử dụng để mô tả rủi ro tín dụng:
+The project begins by examining four main groups of information used to describe credit risk:
 
-| Nhóm dữ liệu | Ví dụ | Mục đích |
+| Data Group | Examples | Purpose |
 |---|---|---|
-| Hồ sơ khách hàng | Tuổi, việc làm, nhà ở | Đánh giá mức độ ổn định của khách hàng |
-| Năng lực tài chính | Thu nhập, DTI, LTI | Đánh giá khả năng trả nợ |
-| Thông tin khoản vay | Số tiền vay, mục đích, kỳ hạn, lãi suất | Hiểu quy mô và chi phí khoản vay |
-| Credit History | Từng vỡ nợ, credit history, thanh toán trễ | Đánh giá hành vi tín dụng trong quá khứ |
+| Customer Profile | Age, employment, home ownership | Assess customer stability |
+| Financial Capacity | Income, DTI, LTI | Assess repayment capacity |
+| Loan Information | Loan amount, purpose, term, interest rate | Understand loan size and borrowing cost |
+| Credit History | Previous default, credit history length, late payments | Assess past credit behavior |
 
-Báo cáo Power BI có một trang **Từ Điển Dữ Liệu** riêng để giải thích ý nghĩa và cách sử dụng của các biến quan trọng cũng như các thuật ngữ trong mô hình.
+The Power BI report includes a dedicated **Data Dictionary** page explaining the meaning and usage of key variables and model terminology.
 
 ---
 
 ## 2. Calculated Risk Metrics
 
-Một số chỉ số được tính toán nhằm giúp việc phân tích tín dụng dễ diễn giải hơn.
+Several metrics are calculated to make credit analysis easier to interpret.
 
 ### DTI — Debt-to-Income Ratio
 
 ```text
-DTI = (Số tiền vay + Khoản nợ khác) / Thu nhập hàng năm
+DTI = (Loan Amount + Other Debt) / Annual Income
 ```
 
-Phản ánh tổng gánh nặng nợ so với thu nhập hàng năm.
+Reflects the total debt burden relative to annual income.
 
 ### LTI — Loan-to-Income Ratio
 
 ```text
-LTI = Số tiền vay / Thu nhập hàng năm
+LTI = Loan Amount / Annual Income
 ```
 
-Đo lường quy mô khoản vay yêu cầu so với thu nhập hàng năm.
+Measures the requested loan amount relative to annual income.
 
-### Tỷ Lệ Nợ Xấu
+### Default Rate
 
 ```text
-Default Rate = Số trường hợp nợ xấu / Total số trường hợp
+Default Rate = Number of Default Cases / Total Cases
 ```
 
-Các chỉ số này được sử dụng xuyên suốt quá trình phân tích trên Power BI và quy trình xây dựng mô hình.
+These metrics are used throughout the Power BI analysis and model development workflow.
 
 ---
 
-## 3. Exploratory Data Analysis (phân tích dữ liệu khám phá) & Nhận xét
+## 3. Exploratory Data Analysis (EDA) & Insights
 
-Giai đoạn phân tích danh mục tập trung giải quyết câu hỏi nghiệp vụ cốt lõi:
+The portfolio analysis focuses on answering the core business question:
 
-**"Nợ xấu đang tập trung ở đâu?"**
+**"Where are defaults concentrated?"**
 
-Phân tích các nhóm khách hàng và cấu trúc khoản vay trên toàn bộ **32,566 hồ sơ**.
+The analysis examines customer segments and loan structures across all **32,566 applications**.
 
-<div align="center">
-  <img src="images/02_data_analytics.png" alt="Dashboard phân tích nợ xấu tín dụng" width="100%" />
-</div>
-
-### 📌 Các chỉ số Total Quan Danh Mục
+### 📌 Portfolio Overview KPIs
 
 <div align="center">
 
-| Total số hồ sơ | Hồ sơ nợ xấu | Default Rate tổng thể | Total tiền vay nợ xấu |
+| Total Applications | Default Cases | Overall Default Rate | Total Defaulted Loan Amount |
 | :---: | :---: | :---: | :---: |
-| **32,566** | **7,107** | **21.82%** | **2,010 tỷ VND** |
+| **32,566** | **7,107** | **21.82%** | **2,010 billion VND** |
 
 </div>
 
-### 💡 Các Nhận xét Chiến Lược Chính
+### 💡 Key Strategic Insights
 
 > [!IMPORTANT]
-> **01. DEBT BURDEN (DEBT BURDEN):**
-> * **Default Rate leo thang phi mã theo đòn bẩy tài chính:** Cả hai chỉ số LTI và DTI đều cho thấy mối quan hệ đồng biến cực mạnh với rủi ro vỡ nợ.
-> * Nhóm vay có **LTI ≥ 0.40** ghi nhận tỷ lệ nợ xấu **74.54%** (cao gấp **6.5 lần** so với nhóm an toàn < 0.10 ở mức 11.51%).
-> * Nhóm **DTI ≥ 0.70** có tỷ lệ nợ xấu chạm đỉnh **79.04%** (cao gấp **7.1 lần** nhóm < 0.20 ở mức 11.08%).
-> * *Quy mô rủi ro:* Phân khúc **LTI từ 0.30 – 0.40** gánh lượng nợ xấu lớn nhất toàn danh mục với **673.8 tỷ VND**, trong khi phân khúc **DTI từ 0.35 – 0.70** tập trung tới **1,477.2 tỷ VND** nợ xấu.
+> **01. DEBT BURDEN:**
+> * **Default risk rises sharply with financial leverage:** Both LTI and DTI show a strong positive relationship with default risk.
+> * Borrowers with **LTI ≥ 0.40** record a **74.54%** default rate, approximately **6.5 times** the 11.51% rate of the low-risk group with LTI < 0.10.
+> * The **DTI ≥ 0.70** group reaches a default rate of **79.04%**, approximately **7.1 times** the 11.08% rate of the DTI < 0.20 group.
+> * *Risk exposure:* The **LTI 0.30–0.40** segment carries the largest defaulted loan amount at **673.8 billion VND**, while the **DTI 0.35–0.70** segment contains **1,477.2 billion VND** in defaulted loans.
 
 > [!WARNING]
-> **02. BORROWING COSTS (BORROWING COSTS):**
-> * **Lãi suất cao tạo vòng xoáy mất khả năng thanh toán:** Lãi suất càng cao, nợ xấu càng nghiêm trọng. Nhóm khách hàng chịu lãi suất **≥ 16%** có tỷ lệ nợ xấu lên tới **63.23%**.
-> * Nhóm lãi suất cận cao **12 – 15.99%** nắm giữ khối lượng tiền vay nợ xấu lớn nhất danh mục (**799.3 tỷ VND**, chiếm ~40% tổng dư nợ xấu), cho thấy chi phí vốn nặng nề trực tiếp bóp nghẹt rows tiền trả nợ hàng tháng.
+> **02. BORROWING COSTS:**
+> * **Higher interest rates are associated with greater repayment pressure:** Customers with interest rates **≥ 16%** have a default rate of **63.23%**.
+> * The **12–15.99%** interest-rate segment holds the largest defaulted loan amount in the portfolio at **799.3 billion VND**, accounting for approximately 40% of total defaulted loan value, indicating substantial repayment pressure from borrowing costs.
 
 > [!TIP]
-> **03. EARNING CAPACITY (EARNING CAPACITY):**
-> * **Lớp đệm thu nhập bảo vệ danh mục an toàn:** Default Rate nghịch biến rõ rệt với quy mô thu nhập của khách hàng.
-> * Nhóm thu nhập thấp nhất (**< 782 triệu VND**) có tỷ lệ vỡ nợ lên tới **47.08%**, nhưng tỷ lệ này giảm liên tục xuống chỉ còn **8.73%** ở nhóm có thu nhập cao (**≥ 3.91 tỷ VND**).
-> * Phân khúc khách hàng trung lưu (**782 triệu – 1.96 tỷ VND**) là nhóm tích tụ giá trị nợ xấu lớn nhất danh mục (**1,330.8 tỷ VND**), đòi hỏi quy trình thẩm định rows tiền chặt chẽ hơn thay vì chỉ dựa vào quy mô thu nhập danh nghĩa.
+> **03. EARNING CAPACITY:**
+> * **Higher income provides a stronger financial buffer:** Default rates decline clearly as customer income increases.
+> * The lowest-income group (**< 782 million VND**) has a default rate of **47.08%**, while the rate steadily falls to **8.73%** among high-income customers (**≥ 3.91 billion VND**).
+> * The middle-income segment (**782 million–1.96 billion VND**) accumulates the largest defaulted loan value at **1,330.8 billion VND**, suggesting that cash-flow assessment should remain important rather than relying only on nominal income.
 
 ---
 
@@ -175,23 +171,23 @@ Phân tích các nhóm khách hàng và cấu trúc khoản vay trên toàn bộ
 
 ## 4. Model Architecture & Preprocessing Workflow
 
-Model Framework dự đoán sử dụng **Logistic Regression** để ước tính **Probability Vỡ nợ (Xác Suất Vỡ Nợ - PD)**.
+The predictive framework uses **Logistic Regression** to estimate the **Probability of Default (PD)**.
 
-Workflow đảm bảo tính toàn vẹn dữ liệu thông qua **Chia phân tầng (80% Huấn luyện / 20% Kiểm tra)** dựa trên biến trạng thái trả nợ.
+Data integrity is maintained through a **Stratified 80/20 Train/Test Split** based on repayment status.
 
 ```text
 Original Dataset (32,566 rows)
          │
-         ▼  Chia Stratified 80/20
-┌─────────────────────────┬─────────────────────────┐
-│ Tập Huấn luyện (26,052 rows) │ Tập Kiểm tra (6,514 rows)  │
-└─────────────────────────┴─────────────────────────┘
+         ▼  Stratified 80/20 Split
+┌─────────────────────────────┬─────────────────────────┐
+│ Training Set (26,052 rows)  │ Test Set (6,514 rows)  │
+└─────────────────────────────┴─────────────────────────┘
          │
          ▼
-Dự đoán xác suất thô (Tập Kiểm Tra)
+Raw Probability Predictions (Test Set)
          │
          ▼
-Risk Adjustment Layer (Ngưỡng LTI & Quy tắc nghiệp vụ)
+Risk Adjustment Layer (LTI Thresholds & Business Rules)
          │
          ▼
 Final Validated Credit Risk Assessment
@@ -201,21 +197,21 @@ Final Validated Credit Risk Assessment
 
 ## 5. Feature Importance & Variable Contribution
 
-Level độ đóng góp tương đối của từng đặc trưng được định lượng bằng giá trị tuyệt đối chuẩn hóa của hệ số mô hình, được điều chỉnh theo độ lệch chuẩn của từng đặc trưng nhằm đảm bảo khả năng so sánh giữa các biến có thang đo khác nhau:
+The relative contribution of each feature is quantified using the normalized absolute value of the model coefficient, adjusted by each feature's standard deviation to ensure comparability across variables with different scales:
 
 <div align="center">
 
-| Xếp hạng | Feature Name | Contribution (%) | Business Interpretation |
+| Rank | Feature Name | Contribution (%) | Business Interpretation |
 | :---: | :--- | :---: | :--- |
-| **01** | **Tỷ lệ Khoản vay / Thu nhập (LTI)** | **38.28%** | Yếu tố rủi ro chính: mức đòn bẩy quá cao so với khả năng thu nhập hàng năm. |
-| **02** | **Lãi suất khoản vay (%)** | **28.16%** | Chi phí nợ trực tiếp làm gia tăng áp lực trả nợ hàng tháng. |
-| **03** | **Số tiền vay yêu cầu (VND)** | **20.43%** | Quy mô mức độ tiếp xúc vốn: khoản vay lớn làm tăng mức độ tổn thất khi vỡ nợ. |
-| **04** | **Thu nhập hàng năm (VND)** | **4.44%** | Năng lực tạo thu nhập và lớp đệm tài chính để trả nợ. |
-| **05** | **Tình trạng sở hữu nhà** | **3.04%** | Chỉ báo về mức độ ổn định tài sản cá nhân và sức mạnh tài sản đảm bảo. |
-| **06** | **Lịch sử từng vỡ nợ** | **2.77%** | Lịch sử quá hạn tín dụng và kỷ luật trả nợ trong quá khứ. |
-| **07** | **Tỷ lệ Nợ / Thu nhập (DTI)** | **2.44%** | Total gánh nặng nợ từ nhiều nghĩa vụ tài chính. |
-| **08** | **Mục đích khoản vay** | **0.43%** | Phân nhóm mục đích sử dụng nguồn vốn. |
-| | **Total** | **100.00%** | **Top 3 đặc trưng chiếm 86.87% tổng trọng số quyết định của mô hình.** |
+| **01** | **Loan-to-Income Ratio (LTI)** | **38.28%** | Primary risk factor: excessive leverage relative to annual income capacity. |
+| **02** | **Loan Interest Rate (%)** | **28.16%** | Higher debt cost directly increases monthly repayment pressure. |
+| **03** | **Requested Loan Amount (VND)** | **20.43%** | Exposure size: larger loans increase potential loss when default occurs. |
+| **04** | **Annual Income (VND)** | **4.44%** | Income-generating capacity and financial buffer for debt repayment. |
+| **05** | **Home Ownership Status** | **3.04%** | Indicator of personal asset stability and financial position. |
+| **06** | **Previous Default History** | **2.77%** | Historical credit delinquency and past repayment discipline. |
+| **07** | **Debt-to-Income Ratio (DTI)** | **2.44%** | Total debt burden across multiple financial obligations. |
+| **08** | **Loan Purpose** | **0.43%** | Categorizes the intended use of borrowed funds. |
+| | **Total** | **100.00%** | **The top 3 features account for 86.87% of the model's total feature contribution.** |
 
 </div>
 
@@ -223,34 +219,34 @@ Level độ đóng góp tương đối của từng đặc trưng được đị
 
 ## 6. Model Evaluation & Performance Metrics
 
-Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được sử dụng trong quá trình huấn luyện (6,514 hồ sơ)** sau khi tích hợp lớp điều chỉnh rủi ro ở Bước 5.
+The model is evaluated on an **unseen Test Set of 6,514 applications** after integrating the risk adjustment layer from Step 5.
 
-### 📈 Total Quan Hiệu Suất
+### 📈 Performance Overview
 
 <div align="center">
 
-| Chỉ số | Kết quả | Industry Reference & Interpretation |
+| Metric | Result | Interpretation |
 | :--- | :---: | :--- |
-| **Độ chính xác (Độ chính xác)** | **94.80%** | Tỷ lệ phân loại chính xác tổng thể giữa khoản vay tốt và khoản vay xấu. |
-| **ROC-AUC** | **0.8593** | Ability to discriminate giữa khách hàng vỡ nợ và không vỡ nợ. |
-| **Recall (Sensitivity)** | **92.41%** | Correctly identifies **92.41%** tổng số trường hợp vỡ nợ thực tế trong danh mục. |
-| **Precision** | **85.05%** | Khi mô hình cảnh báo rủi ro vỡ nợ, kết quả chính xác **85.05%** số lần. |
-| **Specificity** | **95.46%** | Protects **95.46%** khách hàng có khả năng trả nợ khỏi việc bị từ chối nhầm. |
-| **F1-Score** | **88.57%** | Balance giữa khả năng phát hiện rủi ro và duy trì khách hàng tốt. |
-| **K-S Statistic** | **0.5850** | Separation ability mạnh giữa các nhóm rủi ro. |
-| **PR-AUC** | **0.7450** | Reliability cao trong điều kiện dữ liệu tín dụng mất cân bằng (~21.8% nợ xấu). |
-| **Brier Score / Log Loss** | **0.101 / 0.335** | Reliability của các xác suất dự đoán. |
+| **Accuracy** | **94.80%** | Overall proportion of correctly classified good and defaulted loans. |
+| **ROC-AUC** | **0.8593** | Ability to discriminate between defaulting and non-defaulting customers. |
+| **Recall (Sensitivity)** | **92.41%** | Correctly identifies **92.41%** of actual default cases in the portfolio. |
+| **Precision** | **85.05%** | When the model flags a default risk, it is correct **85.05%** of the time. |
+| **Specificity** | **95.46%** | Correctly identifies **95.46%** of non-defaulting customers. |
+| **F1-Score** | **88.57%** | Balances default detection and prediction precision. |
+| **K-S Statistic** | **0.5850** | Indicates strong separation between risk groups. |
+| **PR-AUC** | **0.7450** | Measures precision-recall performance under class imbalance (~21.8% defaults). |
+| **Brier Score / Log Loss** | **0.101 / 0.335** | Measures the quality and reliability of predicted probabilities. |
 
 </div>
 
-### 🎯 Confusion Matrix (Tập Kiểm Tra: 6,514 Hồ Sơ)
+### 🎯 Confusion Matrix (Test Set: 6,514 Applications)
 
 <div align="center">
 
-| | **Dự đoán: Nợ xấu (Cảnh báo rủi ro)** | **Dự đoán: Không nợ xấu (Được phê duyệt)** |
+| | **Predicted: Default (Risk Alert)** | **Predicted: Non-Default** |
 | :--- | :---: | :---: |
-| **Thực tế: Nợ xấu (1,422 trường hợp)** | **1,314 TP** *(Phát hiện được nợ xấu)* | **108 FN** *(Bỏ sót nợ xấu)* |
-| **Thực tế: Không nợ xấu (5,092 trường hợp)** | **231 FP** *(Cảnh báo nhầm)* | **4,861 TN** *(Khoản vay tốt được phê duyệt)* |
+| **Actual: Default (1,422 cases)** | **1,314 TP** *(Defaults detected)* | **108 FN** *(Defaults missed)* |
+| **Actual: Non-Default (5,092 cases)** | **231 FP** *(False alerts)* | **4,861 TN** *(Good loans correctly identified)* |
 
 </div>
 
@@ -260,33 +256,33 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 
 ## 7. Error Audit & Cost-Sensitive Analysis (DBeaver / SQL)
 
-### 🟢 1. Rescue Layer: FP → TN (*Clearing Good Customers*)
+### 🟢 1. Rescue Layer: FP → TN (*Recovering Good Customers*)
 
-* **Scope:** `prediction_test_non_default.csv` (Toàn bộ **5,092 hồ sơ** thực tế không phát sinh nợ xấu).
-* **Baseline trước điều chỉnh:**
-  * **TN (Phê duyệt đúng):** **3,704 trường hợp**
-  * **FP (Cảnh báo nhầm / Từ chối nhầm):** **1,388 trường hợp**
+* **Scope:** `prediction_test_non_default.csv` (all **5,092 applications** that did not actually default).
+* **Baseline before adjustment:**
+  * **TN (Correct Non-Default Predictions):** **3,704 cases**
+  * **FP (False Alerts):** **1,388 cases**
 * **Adjustment Condition:**
   $$\mathbf{0.1987 \le LTI \le 0.342}$$
-* **Cases Rescued:** **1,157 trường hợp** được chuyển từ **FP → TN** (các khách hàng có khả năng trả nợ được mở lại cơ hội vay).
-* **Remaining Cases:** **231 trường hợp** vẫn là FP (giữ lại vùng đệm rủi ro thận trọng).
+* **Cases Rescued:** **1,157 cases** are moved from **FP → TN**, restoring lending opportunities for customers who were actually able to repay.
+* **Remaining Cases:** **231 cases** remain FP, preserving a conservative risk buffer.
 * **Post-Adjustment Result:**
-  * **TN increases:** $3,704 \rightarrow \mathbf{4,861 \text{ trường hợp}}$
-  * **FP decreases:** $1,388 \rightarrow \mathbf{231 \text{ trường hợp}}$ *(loại bỏ 83.36% cảnh báo nhầm)*
+  * **TN increases:** $3,704 \rightarrow \mathbf{4,861 \text{ cases}}$
+  * **FP decreases:** $1,388 \rightarrow \mathbf{231 \text{ cases}}$ *(83.36% of false alerts removed)*
 
 ### 🔴 2. Catch Layer: FN → TP (*Catching Hidden Defaults*)
 
-* **Scope:** `prediction_test_has_default.csv` (Toàn bộ **1,422 hồ sơ** thực tế phát sinh nợ xấu).
-* **Baseline trước điều chỉnh:**
-  * **TP (Đã phát hiện nợ xấu):** **865 trường hợp**
-  * **FN (Bỏ sót nợ xấu / Rò rỉ):** **557 trường hợp**
+* **Scope:** `prediction_test_has_default.csv` (all **1,422 applications** that actually defaulted).
+* **Baseline before adjustment:**
+  * **TP (Defaults Detected):** **865 cases**
+  * **FN (Missed Defaults):** **557 cases**
 * **Adjustment Condition:**
   $$\mathbf{0.0653 \le LTI \le 0.1907}$$
-* **Cases Recovered:** **449 trường hợp** được chuyển từ **FN → TP** (giảm nguy cơ phát sinh tổn thất vốn nghiêm trọng).
-* **Remaining Cases:** **108 trường hợp** vẫn là FN (được theo dõi và chuyển sang hội đồng tín dụng xem xét thủ công).
+* **Cases Recovered:** **449 cases** are moved from **FN → TP**, reducing the risk of missed default cases.
+* **Remaining Cases:** **108 cases** remain FN and are monitored or escalated for manual credit review.
 * **Post-Adjustment Result:**
-  * **TP increases:** $865 \rightarrow \mathbf{1,314 \text{ trường hợp}}$
-  * **FN decreases:** $557 \rightarrow \mathbf{108 \text{ trường hợp}}$ *(thu hồi 80.61% trường hợp nợ xấu bị bỏ sót)*
+  * **TP increases:** $865 \rightarrow \mathbf{1,314 \text{ cases}}$
+  * **FN decreases:** $557 \rightarrow \mathbf{108 \text{ cases}}$ *(80.61% of previously missed defaults recovered)*
 
 ---
 
@@ -296,54 +292,54 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 
 | Level | Probability | Review Process |
 | :---: | :---: | :--- |
-| 🟢 **1** | < 20% | Standard Review: xác minh KYC, kiểm tra thu nhập, DTI, LTI, mục đích vay, lịch sử vỡ nợ, trùng lặp hồ sơ. |
-| 🟡 **2** | 20–35% | Enhanced Review (gồm toàn bộ Level 1): phân tích chi tiết khả năng trả nợ, yêu cầu chứng từ bổ sung (sao kê, hợp đồng lao động), cross-check chéo thông tin, gọi xác minh khi cần. |
-| 🔴 **3** | ≥ 35% | In-Depth Assessment: xác minh nguồn thu nhập, kiểm tra DTI/LTI đặc biệt cao, cross-check Tờ khai ↔ Chứng từ ↔ Sao kê ↔ CIC. ⚠️ *Level 3 không đồng nghĩa tự động từ chối.* |
+| 🟢 **1** | < 20% | Standard review: verify KYC, income, DTI, LTI, loan purpose, default history, and duplicate applications. |
+| 🟡 **2** | 20–35% | Enhanced review (including all Level 1 checks): perform detailed repayment-capacity analysis, request additional documents such as bank statements and employment contracts, cross-check information, and conduct verification calls when necessary. |
+| 🔴 **3** | ≥ 35% | In-depth assessment: verify income sources, review unusually high DTI/LTI values, and cross-check Declaration ↔ Supporting Documents ↔ Bank Statements ↔ CIC. ⚠️ *Level 3 does not mean automatic rejection.* |
 
 ### What Should Be Checked for High-Risk Applications?
 
 | # | Aspect | Key Indicators | Guidance |
 | :---: | :--- | :--- | :--- |
-| 01 | **Data Quality** | Thiếu · Bất thường · Lỗi thời | Verify input data trước khi dựa vào kết quả mô hình. |
-| 02 | **Repayment Capacity** | Thu nhập · DTI · LTI | Đánh giá gánh nặng tài chính; do not conclude from a single variable. |
-| 03 | **Loan Structure** | Số tiền vay · Lãi suất · Kỳ hạn | Rà soát quy mô và chi phí khoản vay so với năng lực tài chính. |
-| 04 | **Credit History** | Từng vỡ nợ · Thâm niên tín dụng | Đối chiếu hành vi tín dụng trước đây trước khi kết luận mức độ rủi ro. |
-| 05 | **Verification & Authority** | Chứng từ · Xác minh bên thứ ba | Xác minh hồ sơ rủi ro cao hoặc thiếu dữ liệu; escalate for review when necessary, strictly comply with data privacy requirements. |
+| 01 | **Data Quality** | Missing · Anomalous · Outdated | Verify input data before relying on model results. |
+| 02 | **Repayment Capacity** | Income · DTI · LTI | Assess the overall financial burden; do not conclude from a single variable. |
+| 03 | **Loan Structure** | Loan Amount · Interest Rate · Term | Review loan size and borrowing cost relative to financial capacity. |
+| 04 | **Credit History** | Previous Default · Credit History Length | Review past credit behavior before determining the level of risk. |
+| 05 | **Verification & Authority** | Documents · Third-Party Verification | Verify high-risk or incomplete applications, escalate for further review when necessary, and strictly comply with data privacy requirements. |
 
-### Segments with High Default Rates Requiring Priority Review
+### Segments with High Observed Default Rates Requiring Priority Review
 
-> *Used to guide in-depth review — not as an automatic rejection threshold.*
+> *Used to guide in-depth review — not as automatic rejection thresholds.*
 
 | Risk Segment | Observed Default Rate |
 | :--- | :---: |
-| Tỷ lệ tổng nợ / thu nhập (DTI) ≥ 0,70 | ≈ **79,0%** |
-| Tỷ lệ khoản vay / thu nhập (LTI) ≥ 0,40 | ≈ **74,5%** |
-| Lãi suất khoản vay ≥ 16% | ≈ **63,2%** |
-| Thu nhập < 782 triệu đồng/năm | ≈ **47,1%** |
-| Lịch sử từng vỡ nợ | ≈ **37,8%** *(vs. ~18,4% nhóm không vỡ nợ)* |
+| Debt-to-Income Ratio (DTI) ≥ 0.70 | ≈ **79.0%** |
+| Loan-to-Income Ratio (LTI) ≥ 0.40 | ≈ **74.5%** |
+| Loan Interest Rate ≥ 16% | ≈ **63.2%** |
+| Annual Income < 782 million VND | ≈ **47.1%** |
+| Previous Default History | ≈ **37.8%** *(vs. ~18.4% for customers without previous defaults)* |
 
-> **General Principle:** Conduct a multi-dimensional assessment (năng lực tài chính + cấu trúc khoản vay + hành vi tín dụng + chất lượng hồ sơ); do not use model probabilities for automatic rejection; comply with applicable laws và protect personal data trong mọi hoạt động xác minh.
+> **General Principle:** Conduct a multi-dimensional assessment covering financial capacity, loan structure, credit behavior, and application quality. Do not use model probabilities for automatic rejection. Comply with applicable laws and protect personal data throughout all verification activities.
 
 ---
 
-## 9. Cấu Trúc Repository
+## 9. Repository Structure
 
 ```text
 ├── docs/
-│   ├── PIPELINE.md               # Technical workflow specification end-to-end
+│   ├── PIPELINE.md               # End-to-end technical workflow specification
 │   ├── HIEN_TRANG_HE_THONG.md    # System architecture & implementation status
 │   └── NHAT_KY_CONG_VIEC.md      # Project development log
 ├── images/
-│   └── credit_risk_workflow.png  # Infographic quy trình độ phân giải cao
+│   └── credit_risk_workflow.png  # High-resolution workflow infographic
 ├── repo_source/
-│   ├── step_1/                   # Nạp dữ liệu, làm sạch & chia stratified
-│   ├── step_2/                   # Huấn luyện mô hình Logistic Regression baseline
-│   ├── step_3/                   # Suy luận mô hình & phân tách prediction results
-│   ├── step_4/                   # Kiểm tra FP/FN, phân tích đóng góp & ngưỡng LTI
-│   ├── run_quy trình.py           # Script thực thi chính (Bước 1 đến 4)
-│   ├── db_import.py              # Script nạp dữ liệu vào PostgreSQL
-│   └── metrics_after_cut.py      # Script tính toán & kiểm tra metric cuối cùng
-├── Phân tích nợ xấu.pbix         # File báo cáo bảng điều khiển Power BI tương tác
+│   ├── step_1/                   # Data ingestion, cleaning & stratified split
+│   ├── step_2/                   # Baseline Logistic Regression model training
+│   ├── step_3/                   # Model inference & prediction result separation
+│   ├── step_4/                   # FP/FN audit, contribution analysis & LTI thresholds
+│   ├── run_pipeline.py           # Main execution script (Steps 1 to 4)
+│   ├── db_import.py              # PostgreSQL data import script
+│   └── metrics_after_cut.py      # Final metric calculation & validation script
+├── Phân tích nợ xấu.pbix         # Interactive Power BI report file
 └── README.md                     # Project documentation
 ```
 
@@ -354,16 +350,16 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 ### Requirements
 
 * Python 3.10+
-* PostgreSQL (Tùy chọn, dùng để lưu trữ dữ liệu)
+* PostgreSQL (Optional, used for data storage)
 
 ### Installation
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/your-username/credit-risk-analytics.git
 cd credit-risk-analytics
 
-# Tạo và kích hoạt virtual environment
+# Create and activate a virtual environment
 python -m venv venv
 
 # Windows:
@@ -376,15 +372,15 @@ source venv/bin/activate
 pip install -r repo_source/requirements.txt
 ```
 
-### Chạy Toàn Bộ Pipeline Từ đầu đến cuối
+### Run the Full End-to-End Pipeline
 
-Thực thi toàn bộ quy trình dữ liệu từ bộ dữ liệu thô đến prediction results cuối cùng:
+Execute the complete data workflow from the raw dataset to the final prediction results:
 
 ```bash
-python repo_source/run_quy trình.py
+python repo_source/run_pipeline.py
 ```
 
-### Kiểm Tra Các Metric Đánh Giá Cuối Cùng
+### Check Final Evaluation Metrics
 
 ```bash
 python repo_source/metrics_after_cut.py
@@ -400,20 +396,20 @@ python repo_source/metrics_after_cut.py
 - Build financial metrics such as DTI and LTI
 - Segment the portfolio across meaningful risk dimensions
 - Build a Power BI dashboard around KPIs and business questions
-- Translate exploratory analysis results into concise business findings
+- Translate EDA results into concise business findings
 
 ### Machine Learning
 
-- Xây dựng mô hình Logistic Regression baseline
+- Build a baseline Logistic Regression model
 - Design financial and interaction features
 - Handle skewed variables using transformations
 - Standardize model inputs
-- Đánh giá ROC-AUC, Recall, Độ chính xác và Specificity
-- Đọc Confusion Matrix và investigate cases FP/FN
+- Evaluate ROC-AUC, Recall, Accuracy, and Specificity
+- Interpret the Confusion Matrix and investigate FP/FN cases
 
-### Data Analysis + Machine Learning
+### Data Analytics + Machine Learning
 
-- Connect descriptive patterns với kết quả của mô hình
+- Connect descriptive patterns with model results
 - Interpret model features in a business context
 - Use error analysis to design additional review rules
 - Communicate model results as decision-support information
@@ -422,20 +418,20 @@ python repo_source/metrics_after_cut.py
 
 # ⚠️ Limitations & Responsible Use
 
-Dự án này là một portfolio implementation **danh mục/phân tích** và không nên được xem là một hệ thống credit decision-making vận hành thực tế.
+This project is a **portfolio/analytics implementation** and should not be considered a production credit decisioning system.
 
-- Các mối quan hệ quan sát được trong bộ dữ liệu không tự chúng chứng minh quan hệ nhân quả.
+- Observed relationships in the dataset do not by themselves establish causality.
 - Risk segmentation thresholds are intended only to guide review, not to serve as automatic approval/rejection rules.
-- Hiệu suất mô hình phụ thuộc vào bộ dữ liệu và phương pháp đánh giá.
-- The current Logistic Regression model may not capture nonlinear relationships as well as more advanced models.
+- Model performance depends on the dataset and evaluation methodology.
+- The current Logistic Regression model may not capture nonlinear relationships as effectively as more advanced models.
 - The Power BI report is intended to support human review rather than replace credit policy, compliance requirements, or professional judgment.
-- Power BI mô hình ngữ nghĩa và cơ sở dữ liệu có thể cần được đồng bộ lại sau khi quy trình có thay đổi.
+- The Power BI semantic model and database may need to be synchronized again after pipeline changes.
 
 ---
 
 # 📖 Documentation
 
-- [`PIPELINE.md`](docs/PIPELINE.md) — processing workflow end-to-end và model workflow
+- [`PIPELINE.md`](docs/PIPELINE.md) — end-to-end processing and model workflow
 - [`HIEN_TRANG_HE_THONG.md`](docs/HIEN_TRANG_HE_THONG.md) — current system/database status
 - [`NHAT_KY_CONG_VIEC.md`](docs/NHAT_KY_CONG_VIEC.md) — project execution log
 - [`Phân tích nợ xấu.pdf`](Phân%20tích%20nợ%20xấu.pdf) — Power BI report exported as PDF
@@ -446,9 +442,9 @@ Dự án này là một portfolio implementation **danh mục/phân tích** và 
 
 <div align="center">
 
-`Data Analysis` · `phân tích dữ liệu khám phá` · `Power BI` · `DAX` · `Excel` · `Trí tuệ kinh doanh` ·  
-`Python` · `pandas` · `scikit-learn` · `Logistic Regression` · `Xây Dựng Đặc Trưng` ·  
-`Đánh giá mô hình` · `PostgreSQL` · `Risk Analysis` · `Hỗ trợ ra quyết định`
+`Data Analysis` · `EDA` · `Power BI` · `DAX` · `Excel` · `Business Intelligence` ·  
+`Python` · `pandas` · `scikit-learn` · `Logistic Regression` · `Feature Engineering` ·  
+`Model Evaluation` · `PostgreSQL` · `Risk Analysis` · `Decision Support`
 
 </div>
 
@@ -462,6 +458,6 @@ Dự án này là một portfolio implementation **danh mục/phân tích** và 
 
 _Data Analysis / Data Science Portfolio_
 
-**Project Duration:** 10/08/2026 – Hiện tại
+**Project Duration:** 10/08/2026 – Present
 
 </div>
