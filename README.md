@@ -285,13 +285,61 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 
 ## 8. Hệ Thống Hỗ Trợ Ra Quyết Định
 
-### Mức Độ Rà Soát Hồ Sơ Theo Xác Suất Rủi Ro
+## 📊 Nhận xét nhóm hồ sơ nợ xấu thực tế thông qua xác suất vỡ nợ từ mô hình hồi quy Logistic
 
-| Mức | Xác suất | Quy trình rà soát |
-| :---: | :---: | :--- |
-| 🟢 **1** | < 20% | Rà soát tiêu chuẩn: xác minh KYC, kiểm tra thu nhập, DTI, LTI, mục đích vay, lịch sử vỡ nợ, trùng lặp hồ sơ. |
-| 🟡 **2** | 20–35% | Rà soát tăng cường (gồm toàn bộ Mức 1): phân tích chi tiết khả năng trả nợ, yêu cầu chứng từ bổ sung (sao kê, hợp đồng lao động), đối chiếu chéo thông tin, gọi xác minh khi cần. |
-| 🔴 **3** | ≥ 35% | Thẩm định chuyên sâu: xác minh nguồn thu nhập, kiểm tra DTI/LTI đặc biệt cao, đối chiếu Tờ khai ↔ Chứng từ ↔ Sao kê ↔ CIC. ⚠️ *Mức 3 không đồng nghĩa tự động từ chối.* |
+### 🟢 Mức 1 – Nhóm có xác suất vỡ nợ nhỏ hơn 25%
+
+**Đặc trưng:**
+- Khách hàng có thu nhập cao nhất (**3,3 tỷ đồng**).
+- Tỷ lệ gánh nợ cực nhẹ (**LTI = 0,06; DTI = 0,24**).
+- Tài sản thế chấp chiếm ưu thế (**59%**).
+- Chủ yếu là nhóm khách hàng vay hợp nhất nợ.
+
+**Vấn đề:**
+- **58%** khách hàng từng có tiền sử vỡ nợ.
+- Tuy nhiên, mô hình dự báo **0% khả năng vỡ nợ**, khiến nhóm này khó được phát hiện nếu chỉ dựa trên các chỉ số tài chính thông thường.
+
+---
+
+### 🟡 Mức 2 – Nhóm có xác suất vỡ nợ từ 25% đến 50%
+
+**Đặc trưng:**
+- Thu nhập khoảng **1,3 tỷ đồng**.
+- Khoản vay nhỏ nhất (**158 triệu đồng**).
+- **LTI = 0,12; DTI = 0,29**.
+- Tỷ lệ vay để mua nhà chiếm khoảng **27%**.
+
+**Vấn đề:**
+- **62,5%** khách hàng từng có lịch sử vỡ nợ.
+- Tuy nhiên, mô hình vẫn đánh giá xác suất vỡ nợ **< 50%**.
+- Do đó, nhóm này có thể **lọt qua quy trình đánh giá rủi ro tiêu chuẩn**.
+
+---
+
+### 🟠 Mức 3 – Nhóm có xác suất vỡ nợ từ 50% đến 75%
+
+**Đặc trưng:**
+- Có tỷ lệ hồ sơ cao nhất.
+- Thu nhập thấp nhất (**1,07 tỷ đồng**).
+- Gánh nợ tăng rõ rệt (**LTI = 0,31; DTI = 0,49**).
+- Tỷ lệ khách hàng thuê nhà cao nhất (**79%**).
+- Có tỷ lệ tiền sử nợ xấu cao nhất (**73,8%**).
+
+**Hiệu quả:**
+- Mô hình nhận diện chính xác **100% khách hàng** rơi vào nhóm vỡ nợ.
+- Mặc dù nhóm này có mức lãi suất vay tương đối thấp (**12,37%**).
+
+---
+
+### 🔴 Mức 4 – Nhóm có xác suất vỡ nợ từ 75% trở lên
+
+**Đặc trưng:**
+- Gánh nợ vượt ngưỡng an toàn (**LTI = 0,43; DTI = 0,61**).
+- Có thu nhập vay lớn nhất (**637 triệu đồng**).
+- Tỷ lệ khách hàng thuê nhà khoảng **77%**.
+
+**Hiệu quả:**
+- Mô hình bắt chính xác **100% trường hợp vỡ nợ**.
 
 ### Hồ Sơ Rủi Ro Cao Cần Kiểm Tra Gì?
 
@@ -340,50 +388,6 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 └── README.md                     # Tài liệu dự án
 ```
 
----
-
-## 10. Hướng Dẫn Thực Thi & Tái Tạo
-
-### Yêu Cầu
-
-* Python 3.10+
-* PostgreSQL (Tùy chọn, dùng để lưu trữ dữ liệu)
-
-### Cài Đặt
-
-```bash
-# Clone repository
-git clone https://github.com/your-username/credit-risk-analytics.git
-cd credit-risk-analytics
-
-# Tạo và kích hoạt virtual environment
-python -m venv venv
-
-# Windows:
-.\venv\Scripts\activate
-
-# Linux/macOS:
-source venv/bin/activate
-
-# Cài đặt các thư viện phụ thuộc
-pip install -r repo_source/requirements.txt
-```
-
-### Chạy Toàn Bộ Pipeline Từ đầu đến cuối
-
-Thực thi toàn bộ quy trình dữ liệu từ bộ dữ liệu thô đến kết quả dự đoán cuối cùng:
-
-```bash
-python repo_source/run_quy trình.py
-```
-
-### Kiểm Tra Các Metric Đánh Giá Cuối Cùng
-
-```bash
-python repo_source/metrics_after_cut.py
-```
-
----
 
 # 📚 Những Gì Tôi Đã Học Được
 
@@ -410,19 +414,6 @@ python repo_source/metrics_after_cut.py
 - Diễn giải các đặc trưng của mô hình trong bối cảnh nghiệp vụ
 - Sử dụng phân tích lỗi để thiết kế các quy tắc rà soát bổ sung
 - Truyền đạt kết quả mô hình dưới dạng thông tin hỗ trợ ra quyết định
-
----
-
-# ⚠️ Hạn Chế & Sử Dụng Có Trách Nhiệm
-
-Dự án này là một triển khai phục vụ **danh mục/phân tích** và không nên được xem là một hệ thống ra quyết định tín dụng vận hành thực tế.
-
-- Các mối quan hệ quan sát được trong bộ dữ liệu không tự chúng chứng minh quan hệ nhân quả.
-- Các ngưỡng phân nhóm rủi ro chỉ nhằm định hướng rà soát, không phải quy tắc tự động phê duyệt/từ chối.
-- Hiệu suất mô hình phụ thuộc vào bộ dữ liệu và phương pháp đánh giá.
-- Mô hình Logistic Regression hiện tại có thể không nắm bắt tốt các mối quan hệ phi tuyến như những mô hình nâng cao hơn.
-- Báo cáo Power BI nhằm hỗ trợ con người trong quá trình rà soát thay vì thay thế chính sách tín dụng, yêu cầu tuân thủ hoặc phán đoán chuyên môn.
-- Power BI mô hình ngữ nghĩa và cơ sở dữ liệu có thể cần được đồng bộ lại sau khi quy trình có thay đổi.
 
 ---
 
