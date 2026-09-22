@@ -1,7 +1,7 @@
 <div align="center">
 
 # Credit Risk Analysis & Default Prediction
-[English](README_eng.md) | Vietnamese
+English | [Vietnamese](README.md)
 ### Data Analytics + Machine Learning | Power BI | Python | PostgreSQL
 
 <p>
