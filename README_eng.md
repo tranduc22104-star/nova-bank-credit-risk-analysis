@@ -56,7 +56,7 @@ The final Power BI report combines these two perspectives to support **credit ri
 The project implements an **end-to-end Credit Risk Analysis workflow**, combining **Data Analytics, Data Science, SQL, and Business Intelligence (BI)** to transform raw credit data into actionable insights for portfolio monitoring and credit decision-making.
 
 <div align="center">
-  <img src="images/credit_risk_workflow.png" alt="Credit Risk Analysis Workflow" width="100%" />
+  <img src="image/credit_risk_workflow.png" alt="Credit Risk Analysis Workflow" width="100%" />
 </div>
 
 - **Step 1 - Raw Credit Data (Microsoft Excel):**
