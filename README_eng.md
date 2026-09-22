@@ -287,13 +287,61 @@ The model is evaluated on an **unseen Test Set of 6,514 applications** after int
 
 ## 8. Decision Support System
 
-### Review Level by Risk Probability
+## 📊 Analysis of Actual Bad-Debt Cases Through Default Probability from the Logistic Regression Model
 
-| Level | Probability | Review Process |
-| :---: | :---: | :--- |
-| 🟢 **1** | < 20% | Standard review: verify KYC, income, DTI, LTI, loan purpose, default history, and duplicate applications. |
-| 🟡 **2** | 20–35% | Enhanced review (including all Level 1 checks): perform detailed repayment-capacity analysis, request additional documents such as bank statements and employment contracts, cross-check information, and conduct verification calls when necessary. |
-| 🔴 **3** | ≥ 35% | In-depth assessment: verify income sources, review unusually high DTI/LTI values, and cross-check Declaration ↔ Supporting Documents ↔ Bank Statements ↔ CIC. ⚠️ *Level 3 does not mean automatic rejection.* |
+### 🟢 Level 1 – Group with a Default Probability Below 25%
+
+**Characteristics:**
+- Customers have the highest income (**VND 3.3 billion**).
+- Very low debt burden (**LTI = 0.06; DTI = 0.24**).
+- Collateralized loans account for the majority (**59%**).
+- Primarily consists of customers with debt consolidation loans.
+
+**Issue:**
+- **58%** of customers have a history of default.
+- However, the model predicts a **0% probability of default**, making this group difficult to identify if relying solely on conventional financial indicators.
+
+---
+
+### 🟡 Level 2 – Group with a Default Probability from 25% to below 50%
+
+**Characteristics:**
+- Income of approximately **VND 1.3 billion**.
+- Smallest loan amount (**VND 158 million**).
+- **LTI = 0.12; DTI = 0.29**.
+- Home purchase loans account for approximately **27%**.
+
+**Issue:**
+- **62.5%** of customers have a history of default.
+- However, the model still estimates a default probability of **< 50%**.
+- Therefore, this group may **pass through the standard risk assessment process**.
+
+---
+
+### 🟠 Level 3 – Group with a Default Probability from 50% to below 75%
+
+**Characteristics:**
+- Has the highest proportion of applications.
+- Has the lowest income (**VND 1.07 billion**).
+- Debt burden increases significantly (**LTI = 0.31; DTI = 0.49**).
+- Has the highest proportion of renters (**79%**).
+- Has the highest proportion of customers with a history of bad debt (**73.8%**).
+
+**Performance:**
+- The model correctly identifies **100% of customers** in the default group.
+- Despite having a relatively low borrowing interest rate (**12.37%**).
+
+---
+
+### 🔴 Level 4 – Group with a Default Probability of 75% or Higher
+
+**Characteristics:**
+- Debt burden exceeds the safety threshold (**LTI = 0.43; DTI = 0.61**).
+- Has the highest loan income (**VND 637 million**).
+- Approximately **77%** of customers are renters.
+
+**Performance:**
+- The model correctly identifies **100% of default cases**.
 
 ### What Should Be Checked for High-Risk Applications?
 
@@ -342,50 +390,6 @@ The model is evaluated on an **unseen Test Set of 6,514 applications** after int
 └── README.md                     # Project documentation
 ```
 
----
-
-## 10. Execution & Reproduction Guide
-
-### Requirements
-
-* Python 3.10+
-* PostgreSQL (Optional, used for data storage)
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/credit-risk-analytics.git
-cd credit-risk-analytics
-
-# Create and activate a virtual environment
-python -m venv venv
-
-# Windows:
-.\venv\Scripts\activate
-
-# Linux/macOS:
-source venv/bin/activate
-
-# Install dependencies
-pip install -r repo_source/requirements.txt
-```
-
-### Run the Full End-to-End Pipeline
-
-Execute the complete data workflow from the raw dataset to the final prediction results:
-
-```bash
-python repo_source/run_pipeline.py
-```
-
-### Check Final Evaluation Metrics
-
-```bash
-python repo_source/metrics_after_cut.py
-```
-
----
 
 # 📚 What I Learned
 
@@ -415,18 +419,6 @@ python repo_source/metrics_after_cut.py
 
 ---
 
-# ⚠️ Limitations & Responsible Use
-
-This project is a **portfolio/analytics implementation** and should not be considered a production credit decisioning system.
-
-- Observed relationships in the dataset do not by themselves establish causality.
-- Risk segmentation thresholds are intended only to guide review, not to serve as automatic approval/rejection rules.
-- Model performance depends on the dataset and evaluation methodology.
-- The current Logistic Regression model may not capture nonlinear relationships as effectively as more advanced models.
-- The Power BI report is intended to support human review rather than replace credit policy, compliance requirements, or professional judgment.
-- The Power BI semantic model and database may need to be synchronized again after pipeline changes.
-
----
 
 # 📖 Documentation
 
