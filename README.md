@@ -59,23 +59,26 @@ Dự án triển khai một **quy trình Phân tích Rủi ro Tín dụng từ �
   <img src="images/credit_risk_workflow.png" alt="Quy trình phân tích rủi ro tín dụng" width="100%" />
 </div>
 
-* **Bước 1 - Dữ Liệu Tín Dụng Thô (Microsoft Excel):**
-  * Thu thập và quản lý dữ liệu thô bao gồm **hồ sơ vay, thông tin khách hàng, lịch sử tín dụng, lịch sử khoản vay, dữ liệu giao dịch và dữ liệu tham chiếu**.
+- **Bước 1 - Dữ Liệu Tín Dụng Thô (Microsoft Excel):**
+  - Thu thập và quản lý dữ liệu đầu vào bao gồm **hồ sơ vay, thông tin khách hàng, lịch sử tín dụng, lịch sử khoản vay, dữ liệu giao dịch và dữ liệu tham chiếu**.
 
-* **Bước 2 - Chuẩn Bị Dữ Liệu & phân tích dữ liệu khám phá (Python & Pandas):**
-  * Thực hiện **làm sạch dữ liệu**, xử lý giá trị thiếu, kiểm tra chất lượng dữ liệu, phân tích phân phối và mối quan hệ giữa các biến, đồng thời xác định các **mô hình và chỉ báo rủi ro tiềm ẩn** trước khi xây dựng mô hình.
+- **Bước 2 - Chuẩn Bị Dữ Liệu & Phân Tích Khám Phá (Python & Pandas):**
+  - Thực hiện **làm sạch dữ liệu**, xử lý giá trị thiếu, kiểm tra chất lượng dữ liệu, phân tích phân phối và mối quan hệ giữa các biến, đồng thời khám phá các **mẫu dữ liệu và chỉ báo rủi ro tiềm ẩn** trước khi xây dựng mô hình.
 
-* **Bước 3 - Xây Dựng & Đánh Giá Mô Hình (Scikit-learn):**
-  * Xây dựng mô hình phân loại **Logistic Regression** để dự đoán rủi ro tín dụng. Thực hiện chia tập huấn luyện/kiểm tra, điều chỉnh siêu tham số và đánh giá mô hình bằng **Độ chính xác, Độ chính xác dự báo, Độ bao phủ, F1-score, ROC-AUC và Ma Trận Nhầm Lẫn**.
+- **Bước 3.1 - Xây Dựng & Đánh Giá Mô Hình (Scikit-learn):**
+  - Xây dựng mô hình **Logistic Regression** để dự đoán rủi ro tín dụng. Thực hiện chia tập huấn luyện/kiểm tra và đánh giá mô hình thông qua **Accuracy, Precision, Recall, F1-score, ROC-AUC và Confusion Matrix**.
 
-* **Bước 4 - Phân Tích FP / FN (DBeaver - SQL):**
-  * Sử dụng **SQL** để so sánh kết quả dự đoán với kết quả thực tế, xác định các trường hợp **Trường Hợp Âm Tính Giả (FN)** và **Trường Hợp Dương Tính Giả (FP)**, đồng thời phân tích đặc điểm khách hàng và khoản vay liên quan đến các trường hợp mô hình dự đoán sai.
+- **Bước 3.2 - Phân Khúc Dữ Liệu & Xây Dựng Dashboard Quản Lý Rủi Ro (Power BI):**
+  - Thực hiện **phân khúc khách hàng và khoản vay** dựa trên các đặc điểm tín dụng và chỉ báo rủi ro. Xây dựng **Biểu Đồ Quản Trị Nợ Xấu** để trực quan hóa các nhóm khách hàng, đặc điểm danh mục và các chỉ số rủi ro phục vụ phân tích.
 
-* **Bước 5 - Điều Chỉnh Rủi Ro (Python Rules):**
-  * Áp dụng **các quy tắc nghiệp vụ** dựa trên kết quả phân tích FP/FN để điều chỉnh dự đoán của mô hình, tinh chỉnh phân loại rủi ro và tạo ra **Điểm Rủi Ro / Phân Khúc Rủi Ro Cuối Cùng** phục vụ phân tích nghiệp vụ.
+- **Bước 4 - Phân Tích Hồ Sơ Bị Không Nợ Xấu BỊ Bắt Nhầm (FP) / Hồ Sơ Nợ Xấu Bị Bỏ Sót (FN) (DBeaver - SQL):**
+  - Sử dụng **SQL** để so sánh kết quả dự đoán với kết quả thực tế, xác định các trường hợp **False Negative (FN)** và **False Positive (FP)**, đồng thời phân tích đặc điểm khách hàng và khoản vay liên quan đến các trường hợp mô hình dự đoán sai.
 
-* **Bước 6 - Hỗ Trợ Ra Quyết Định (Power BI):**
-  * Xây dựng **biểu đồ bảng điều khiển Power BI tương tác** để trực quan hóa danh mục khoản vay, phân khúc rủi ro, đặc điểm khách hàng và các chỉ số rủi ro quan trọng, hỗ trợ **theo dõi danh mục, đánh giá rủi ro và ra quyết định tín dụng**.
+- **Bước 5 - Điều Chỉnh Rủi Ro (Python):**
+  - Phân tích kết quả Hồ Sơ Bị Không Nợ Xấu BỊ Bắt Nhầm (FP) / Hồ Sơ Nợ Xấu Bị Bỏ Sót (FN) và **điều chỉnh kết quả dự đoán của mô hình** dựa trên các đặc điểm rủi ro được phát hiện, từ đó chuẩn bị **điểm rủi ro và kết quả phân loại cuối cùng** phục vụ phân tích nghiệp vụ.
+
+- **Bước 6 - Hỗ Trợ Ra Quyết Định (Power BI):**
+  - Tổng hợp kết quả từ **phân tích dữ liệu, mô hình dự đoán** vào dashboard tương tác, hỗ trợ **theo dõi danh mục khoản vay, đánh giá rủi ro và ra quyết định tín dụng**.
 
 ---
 
