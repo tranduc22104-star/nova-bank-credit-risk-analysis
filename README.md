@@ -56,7 +56,7 @@ Báo cáo Power BI cuối cùng kết hợp hai góc nhìn này nhằm hỗ tr�
 Dự án triển khai một **quy trình Phân tích Rủi ro Tín dụng từ đầu đến cuối**, kết hợp **Phân tích dữ liệu, Khoa học dữ liệu, SQL và Trí tuệ kinh doanh (BI)** để chuyển đổi dữ liệu tín dụng thô thành các nhận xét có thể hành động nhằm hỗ trợ theo dõi danh mục và ra quyết định tín dụng.
 
 <div align="center">
-  <img src="images/credit_risk_workflow.png" alt="Quy trình phân tích rủi ro tín dụng" width="100%" />
+  <img src="image/credit_risk_workflow.png" alt="Quy trình phân tích rủi ro tín dụng" width="100%" />
 </div>
 
 - **Bước 1 - Dữ Liệu Tín Dụng Thô (Microsoft Excel):**
