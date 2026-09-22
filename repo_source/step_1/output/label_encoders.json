@@ -1,0 +1,87 @@
+{
+  "Tình trạng sở hữu nhà": [
+    "Khác",
+    "Sở hữu nhà",
+    "Thuê nhà",
+    "Thế chấp"
+  ],
+  "Mục đích khoản vay": [
+    "Cá nhân",
+    "Cải tạo nhà",
+    "Giáo dục",
+    "Hợp nhất nợ",
+    "Kinh doanh",
+    "Y tế"
+  ],
+  "Hạng tín dụng khoản vay": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+  ],
+  "Từng vỡ nợ trong hồ sơ tín dụng (Có/Không)": [
+    "Có",
+    "Không"
+  ],
+  "Giới tính": [
+    "Nam",
+    "Nữ"
+  ],
+  "Tình trạng hôn nhân": [
+    "Góa",
+    "Đã kết hôn",
+    "Đã ly hôn",
+    "Độc thân"
+  ],
+  "Trình độ học vấn": [
+    "Cử nhân",
+    "Thạc sĩ",
+    "Tiến sĩ",
+    "Trung học phổ thông"
+  ],
+  "Quốc gia cư trú": [
+    "Canada",
+    "USA",
+    "Vương quốc Anh"
+  ],
+  "Tỉnh/Bang cư trú": [
+    "BC",
+    "California",
+    "England",
+    "New York",
+    "Ontario",
+    "Quebec",
+    "Scotland",
+    "Texas",
+    "Wales"
+  ],
+  "Thành phố cư trú": [
+    "Buffalo",
+    "Cardiff",
+    "Dallas",
+    "Edinburgh",
+    "Glasgow",
+    "Houston",
+    "London",
+    "Los Angeles",
+    "Manchester",
+    "Montreal",
+    "New York City",
+    "Ottawa",
+    "Quebec City",
+    "San Francisco",
+    "Swansea",
+    "Toronto",
+    "Vancouver",
+    "Victoria"
+  ],
+  "Loại hình việc làm": [
+    "Bán thời gian",
+    "Thất nghiệp",
+    "Toàn thời gian",
+    "Tự kinh doanh"
+  ]
+}

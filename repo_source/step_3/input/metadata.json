@@ -1,0 +1,24 @@
+{
+  "model_type": "LogisticRegression",
+  "model_path": "C:\\Users\\This PC\\Desktop\\179\\repo_source\\step_2\\output\\model.pkl",
+  "train_final_path": "C:\\Users\\This PC\\Desktop\\179\\repo_source\\step_2\\output\\train_final.csv",
+  "feature_columns": [
+    "Lãi suất khoản vay (%)",
+    "Tỷ lệ khoản vay trên thu nhập",
+    "Tỷ lệ tổng nợ trên thu nhập",
+    "Thu nhập hàng năm (VND)",
+    "Tình trạng sở hữu nhà",
+    "Từng vỡ nợ trong hồ sơ tín dụng (Có/Không)",
+    "Số tiền vay đề nghị (VND)",
+    "Mục đích khoản vay"
+  ],
+  "target_column": "Trạng thái trả nợ (0 = không vỡ nợ, 1 = vỡ nợ)",
+  "id_columns": [
+    "Mã khách hàng"
+  ],
+  "n_samples": 26052,
+  "metrics": {
+    "accuracy": 0.6934208506064794,
+    "auc": 0.7273555757565473
+  }
+}

@@ -1,0 +1,2 @@
+evaluation_source,ROC AUC,PR AUC,KS,Brier Score,Log Loss,Recall,Precision,Specificity,F1,Threshold,FPR,FNR,TP,FP,FN,TN,Accuracy
+TEST,0.7264,0.4492,0.3542,0.2004,0.5871,0.9241,0.8505,0.9546,0.8857,0.5,0.0454,0.0759,1314,231,108,4861,0.948
