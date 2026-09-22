@@ -301,7 +301,7 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 
 ---
 
-### 🟡 Mức 2 – Nhóm có xác suất vỡ nợ từ 25% đến 50%
+### 🟡 Mức 2 – Nhóm có xác suất vỡ nợ từ 25% đến dưới 50%
 
 **Đặc trưng:**
 - Thu nhập khoảng **1,3 tỷ đồng**.
@@ -316,7 +316,7 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 
 ---
 
-### 🟠 Mức 3 – Nhóm có xác suất vỡ nợ từ 50% đến 75%
+### 🟠 Mức 3 – Nhóm có xác suất vỡ nợ từ 50% đến dưới 75%
 
 **Đặc trưng:**
 - Có tỷ lệ hồ sơ cao nhất.
