@@ -20,6 +20,41 @@ English | [Vietnamese](README.md)
 
 ---
 
+## 📑 Table of Contents
+
+1. [📌 Project Overview](#-project-overview)
+   - [🏢 Business Context](#-business-context)
+   - [🎯 Project Objective](#-project-objective)
+   - [💡 Project Outcome](#-project-outcome)
+
+2. [🔄 Credit Risk Analysis Workflow](#-credit-risk-analysis-workflow-from-raw-data-to-actionable-insights)
+
+3. [📊 Data Analysis](#-data-analysis)
+   - [1. Data Understanding](#1-data-understanding)
+   - [2. Calculated Risk Metrics](#2-calculated-risk-metrics)
+   - [3. Exploratory Data Analysis (EDA) & Insights](#3-exploratory-data-analysis-eda--insights)
+
+4. [🤖 Machine Learning: Default Prediction](#-machine-learning-default-prediction)
+   - [4. Model Architecture & Preprocessing Workflow](#4-model-architecture--preprocessing-workflow)
+   - [5. Feature Importance & Variable Contribution](#5-feature-importance--variable-contribution)
+   - [6. Model Evaluation & Performance Metrics](#6-model-evaluation--performance-metrics)
+
+5. [🔍 Deep-Dive Analysis: FP / FN](#-deep-dive-analysis-fp--fn-using-sql--business-adjustment)
+   - [7. Error Checking & Cost-Based Analysis](#7-error-checking--cost-based-analysis-dbeaver--sql)
+   - [8. Decision Support System](#8-decision-support-system)
+  -[9. Project Structure](#9-project-structure)
+
+6. [📚 What I Learned](#-what-i-learned)
+   - [Data Analysis](#data-analysis)
+   - [Machine Learning](#machine-learning)
+   - [Data Analytics + Machine Learning](#data-analytics--machine-learning)
+
+7. [📖 Documentation](#-documentation)
+
+8. [💼 Skills Demonstrated](#-skills-demonstrated)
+
+9. [Author](#author)
+
 ## 📌 Project Overview
 
 ### 🏢 Business Context
