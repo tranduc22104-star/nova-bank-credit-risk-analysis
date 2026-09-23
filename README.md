@@ -18,6 +18,37 @@
 
 </div>
 
+## 📑 Mục Lục
+
+1. [📌 Tổng Quan Dự Án](#-tổng-quan-dự-án)
+   - [🏢 Bối Cảnh Nghiệp Vụ](#-bối-cảnh-nghiệp-vụ)
+   - [🎯 Mục Tiêu Dự Án](#-mục-tiêu-dự-án)
+   - [💡 Kết Quả Dự Án](#-kết-quả-dự-án)
+
+2. [🔄 Quy Trình Phân Tích Rủi Ro Tín Dụng](#-quy-trình-phân-tích-rủi-ro-tín-dụng-từ-dữ-liệu-thô-đến-nhận-xét-có-thể-hành-động)
+
+3. [📊 Phân Tích Dữ Liệu](#-phân-tích-dữ-liệu)
+   - [1. Tìm Hiểu Dữ Liệu](#1-tìm-hiểu-dữ-liệu)
+   - [2. Các Chỉ Số Rủi Ro Được Tính Toán](#2-các-chỉ-số-rủi-ro-được-tính-toán)
+   - [3. Phân Tích Dữ Liệu Khám Phá & Nhận Xét](#3-phân-tích-dữ-liệu-khám-phá-phân-tích-dữ-liệu-khám-phá--nhận-xét)
+
+4. [🤖 Học Máy: Dự Đoán Nợ Xấu](#-học-máy-dự-đoán-nợ-xấu)
+   - [4. Kiến Trúc Mô Hình & Quy Trình Tiền Xử Lý](#4-kiến-trúc-mô-hình--quy-trình-tiền-xử-lý)
+   - [5. Mức Độ Quan Trọng Của Đặc Trưng](#5-mức-độ-quan-trọng-của-đặc-trưng--đóng-góp-của-biến)
+   - [6. Đánh Giá Mô Hình & Các Chỉ Số Hiệu Suất](#6-đánh-giá-mô-hình--các-chỉ-số-hiệu-suất)
+
+5. [🔍 Phân Tích Chuyên Sâu: FP / FN](#-phân-tích-chuyên-sâu-fp--fn-bằng-sql--điều-chỉnh-nghiệp-vụ)
+   - [7. Kiểm Tra Sai Sót & Phân Tích Theo Chi Phí](#7-kiểm-tra-sai-sót--phân-tích-theo-chi-phí-dbeaver--sql)
+   - [8. Hệ Thống Hỗ Trợ Ra Quyết Định](#8-hệ-thống-hỗ-trợ-ra-quyết-định)
+   - [9. Cấu Trúc Dự Án](#9-cấu-trúc-dự-án)
+
+6. [📚 Những Gì Tôi Đã Học Được](#-những-gì-tôi-đã-học-được)
+
+7. [📖 Tài Liệu](#-tài-liệu)
+
+8. [💼 Kỹ Năng Thể Hiện](#-kỹ-năng-thể-hiện)
+
+9. [👤 Tác Giả](#tác-giả)
 ---
 
 ## 📌 Tổng Quan Dự Án
@@ -386,7 +417,6 @@ Mô hình được đánh giá trên **Tập Kiểm Tra chưa từng được s�
 │   ├── step_4/                   # Kiểm tra FP/FN, phân tích đóng góp & ngưỡng LTI
 │   ├── run_quy trình.py           # Script thực thi chính (Bước 1 đến 4)
 │   ├── db_import.py              # Script nạp dữ liệu vào PostgreSQL
-│   └── metrics_after_cut.py      # Script tính toán & kiểm tra metric cuối cùng
 ├── Phân tích nợ xấu.pbix         # File báo cáo bảng điều khiển Power BI tương tác
 └── README.md                     # Tài liệu dự án
 ```
